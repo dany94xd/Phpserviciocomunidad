@@ -124,29 +124,37 @@
             <div id="FormSeccion">
             <div id="Titulos">
                 <h1>Formulario de Denuncias.</h1>
-                <h4>Estaremos encantados de responder su denuncia.</h4>
+                <h4 style="color:gray; padding:5px 0px;">Estaremos encantados de responder su denuncia.</h4>
             </div>
             
             <div id="Formulario">
                 <div class="for-nombres">
                     <form>
-                        <input type="text" name="NombreApellido" value="Nombres y Apellidos" size="60" height="10px">
+                        <input type="text" name="NombreApellido" placeholder="Nombre y Apellido">
                     </form>
                 </div>
                 <div class="for-ciudad">
                     <form>
-                        <input type="text" name="Ciudad" value="Ciudad" size="60">
+                        <input type="text" name="Ciudad" placeholder="Ciudad">
                     </form>
                 </div>
                 <div class="for-problema">
                     <form>
-                        <input type="text" name="problema" value="Problema" size="60">
+                        <input type="text" name="problema" placeholder="Problema">
                     </form>
                 </div>
                 <div class="for-direccion">
                     <form>
-                        <input type="text" name="Direccion" value="Direccion" size="60">
+                        <input type="text" name="Direccion" placeholder="Dirección">
                     </form>
+                </div>
+                <div class="for-descripcion">
+                    <div>
+                        <textarea name="Descripcion" placeholder="Escriba aqui su descripción..." rows="5">
+                    </textarea>
+                        
+                    </div>  
+                    <a href="#" style="padding:5px">Subir Foto...</a>
                 </div>
                 <div class="categorias">
                     <br>
@@ -161,18 +169,7 @@
                         <br><br>
                     </form>
                 </div>
-                <div class="for-descripcion">
-                    Descripcion
-                    <div>
-                        <textarea name="Descripcion" rows="5" cols="60">
-                    </textarea>
-                    </div>
-                     
-                </div>
-                
-                <a href="#">Subir Foto...</a>
-                <br>
-                <br>
+               
                 <br>
                 
                     </div>
