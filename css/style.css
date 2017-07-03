@@ -336,6 +336,18 @@ p.copyright {
     line-height: 20px;
     padding-right: 20px;
 }
+
+/*Denuncia Tamaño imagenes denuncias*/
+.tamanioImgDenu{
+    height:500px;
+    width:1000px;
+}
+
+
+.imgDenu{
+    width:500px;
+    height:200px;
+}
 /*-------------------------------------------------*/
 /* =  General code
 /*-------------------------------------------------*/
@@ -511,8 +523,8 @@ ul li {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   background-color: rgb(0,153,255);
-   background-color: rgba(0,153,255, 0.9);
+   background-color: rgb(250,231,46);
+   background-color: rgba(250,231,46, 0.9);
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
