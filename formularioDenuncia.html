@@ -24,10 +24,10 @@
 	
     <style type="text/css">
         
-       
-        #FormSeccion{
+       #FormSeccion{
             margin: 0 auto;
-            padding: 0;
+            box-sizing: border-box;
+            padding: 25px 0px;
             width: 60%;
             background-color: white;
             float: right;
@@ -35,23 +35,42 @@
         #btn_post{
             color: white;
             background-color:dodgerblue;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 10px 30px;
+            font-size: 20px;
+            text-decoration: none;
         }  
         
         #Titulos{
             box-sizing: border-box;
-            padding: 30px 10px;
-        }
-        
-        .for-nombres, .for-problema, .for-ciudad, .for-direccion{
-            box-sizing: border-box;
-            padding: 5px 10px;
-            border-radius: 5px;
             
-            }
         }
         
+        .for-nombres, .for-problema, .for-ciudad, .for-direccion, .for-descripcion{
+            padding: 5px 0px;
+            }
+        
+        input{
+            width: 70%;
+            box-sizing: border-box;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid cornflowerblue;
+        }
+        
+        textarea{
+            width: 70%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid cornflowerblue;
+        }
+        @media screen and (max-width:767px){
+            #FormSeccion{
+                width: 100%;
+                text-align: center;
+            }
+            
+        }
         
     </style>
     
