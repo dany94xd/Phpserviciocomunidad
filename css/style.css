@@ -473,6 +473,50 @@ ul li {
    margin: 0;
 }
 
+.bottom-reg {
+    position: static;
+    height: 50px;
+    
+}
+
+.bottom-reg i {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 45px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.bottom-reg i:hover{
+    background: #000;
+    color: #fff;
+      transform:rotate(360deg);
+      -ms-transform:rotate(360deg);
+      /* IE 9 */
+      -moz-transform:rotate(360deg);
+      /* Firefox */
+      -webkit-transform:rotate(360deg);
+      /* Safari and Chrome */
+      -o-transform:rotate(360deg);
+      /* Opera */
+      transition:all 0.3s ease-in-out;
+      -moz-transition:all 0.3s ease-in-out;
+      -webkit-transition:all 0.3s ease-in-out;
+      -o-transition:all 0.3s ease-in-out;
+}
+
+
+
+
+
+
 .bottom-post {
     position: absolute;
     bottom: 25px;
