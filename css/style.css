@@ -72,6 +72,12 @@ header {
     background: #222222;
     text-align: center;
 }
+.search-box {
+    padding: 10px 10px;
+    background: #222222;
+    text-align: center;
+}
+
 
 a.logo {
     display: inline-block;
