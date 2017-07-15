@@ -1321,13 +1321,28 @@ line-height: 30px;
 .contact-box {
     position: relative;
     z-index: 3;
+   margin: 0 50px 50px;
+    padding: 30px;
+    background: #fff;
+    max-width: 800px;
+    overflow: hidden;
+}
+.login-box {
+    position: relative;
+    z-index: 3;
     margin: 0 30px 30px;
     padding: 30px;
     background: #fff;
     max-width: 780px;
     overflow: hidden;
+    text-align: center;
 }
 
+.contact-info {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .contact-info {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 20px;
@@ -1340,6 +1355,14 @@ line-height: 30px;
     font-weight: 300;
     line-height: 26px;
     margin: 0 0 10px;
+}
+.login-box h1 {
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Courier New', sans-serif;
+    font-weight: 300;
+    line-height: 26px;
+    
 }
 
 #contact-form h1,
@@ -1355,6 +1378,14 @@ line-height: 30px;
     line-height: 30px;
     margin: 0 0 20px;
 }
+.login-info p {
+    color: #a3a3a3;
+    font-size: 18px;
+    font-family: 'Courier New', sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+    
+}
 
 #contact-form {
     overflow: hidden;
@@ -1364,6 +1395,12 @@ line-height: 30px;
     float: left;
     width: 50%;
     padding-right: 10px;
+}
+.text-fieldsl {
+    float: center;
+    width: 100%;
+    text-align: center;
+    
 }
 
 .submit-area {
@@ -1412,6 +1449,7 @@ line-height: 30px;
 }
 
 #contact-form input[type="text"],
+#contact-form input[type="password"],
 #contact-form textarea,
 .comment-form input[type="text"],
 .comment-form textarea {
@@ -1437,6 +1475,7 @@ line-height: 30px;
 }
 
 #contact-form input[type="text"]:focus + span i,
+#contact-form input[type="password"]:focus + span i,
 .comment-form input[type="text"]:focus + span i {
     color: #000;
     background: #0099FF;
