@@ -30,7 +30,7 @@
 		    ================================================== -->
 		<header>
 			<div class="logo-box">
-				<a href="index-2.html"><img alt="" src="images/logo1.png"></a>
+				<a href="index.html"><img alt="Denuncia ya" src="images/logo1.png"></a>
 			</div>
 			<div class="search-box">
             <div></div>
@@ -83,28 +83,36 @@
 					</div>
 
 					<div class="contact-box">
-						<div class="contact-info">
-							<h1>Contáctenos</h1>
-							<p>Cualquier duda o sugerencia acerca del sitio es bueno para nosotros escucharla y atenderla. Envianos tus comentarios llenando este formulario</p>
+						<div class="login-info">
+							<center><h1>Iniciar Sesión</h1>
+							<img alt="Denuncia ya" src="images/usuario.png" style="width:25%;">
+                                </center>
 						</div>
 						<form id="contact-form">
-							<h1>Escribe tu mensaje</h1>
-							<div class="text-fields">
+							<div style="height: 20px;"></div>
+							<div class="text-fieldsl">
+                                <center>
 								<div class="float-input">
-									<input name="name" id="name" type="text" placeholder="Nombres y Apellidos">
+									<input name="name" id="name" type="text" placeholder="Usuario">
 									<span><i class="fa fa-user"></i></span>
 								</div>
 								<div class="float-input">
-									<input name="mail" id="mail" type="text" placeholder="e-mail">
-									<span><i class="fa fa-envelope-o"></i></span>
+									<input name="mail" id="mail" type="password" placeholder="Contraseña">
+									<span><i class="fa fa-lock"></i></span>
 								</div>
+                                <input type="submit" id="submit_contact" class="main-button" value="Login">
+                                    <p>
+                                    
+                                    </p>
+                                    <p>
+                                    
+                                    </p>
+                                <p>Si no tienes cuenta, <a href="signup.html">Regístrate</a></p>
+								<div id="msg" class="message"></div>
+                                    </center>
 														</div>
 
-							<div class="submit-area">
-								<textarea name="comment" id="comment" placeholder="Ingresa tu comentario"></textarea>
-								<input type="submit" id="submit_contact" class="main-button" value="Enviar">
-								<div id="msg" class="message"></div>
-							</div>
+							
 						</form>
 					</div>
 				</div>
