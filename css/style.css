@@ -87,7 +87,7 @@ a.logo {
 p.slogan {
     color: #fff;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     font-style: italic;
     margin: 0;
@@ -105,7 +105,7 @@ a.elemadded {
     display: none;
     color: #000;
     font-size: 28px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     padding: 20px;
     background: #0099FF;
@@ -320,7 +320,7 @@ ul.social-icons li a.github i {
 .info a {
     color: #a5a5a5;
     font-size: 14px;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
 }
 .info i {
     color: #fff;
@@ -330,14 +330,14 @@ ul.social-icons li a.github i {
 .info p {
     color: #a5a5a5;
     font-size: 14px;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     margin-bottom:0; 
 }
 
 p.copyright {
     color: #787878;
     font-size: 12px;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     margin-top: 20px;
     line-height: 20px;
     padding-right: 20px;
@@ -463,7 +463,7 @@ ul li {
    color: #000;
    position: relative;
    font-size: 22px;
-   font-family: 'Courier New';
+   font-family: 'Ubuntu';
    margin: 0;
 }
 .view .post-border {
@@ -475,7 +475,7 @@ ul li {
    font-size: 12px;
    position: relative;
    color: #000;
-   font-family: 'Courier New';
+   font-family: 'Ubuntu';
    margin: 0;
 }
 
@@ -712,7 +712,7 @@ ul li {
 .project-title h2 {
     color: #fff;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 30px;
     margin: 0;
@@ -722,7 +722,7 @@ ul li {
     display: inline-block;
     color: #fff;
     font-size: 12px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     padding-bottom: 12px;
     border-bottom: 1px solid #fff;
@@ -803,7 +803,7 @@ ul li {
 .post-content h2 {
     color: #000;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 26px;
     margin: 0 0 4px;
@@ -816,7 +816,7 @@ ul li {
 .post-content p {
     color: #9c9c9c;
     font-size: 13px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 22px;
     margin: 0;
@@ -842,7 +842,7 @@ ul li {
     display: inline-block;
     color: #9a9a9a;
     font-size: 12px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     text-decoration: none;
     line-height: 22px;
@@ -875,7 +875,7 @@ ul li {
     font-size: 14px;
     line-height: 18px;
     margin: 0;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     margin-bottom: 15px;
 }
 
@@ -883,7 +883,7 @@ ul li {
     display: inline-block;
     color: #000;
     font-size: 13px;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     margin: 0;
     border:1px solid #000;
     padding:8px; 
@@ -908,7 +908,7 @@ ul li {
     border: none;
     color: #fff;
     font-size: 17px;
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     line-height: 26px;
     padding: 0;
     margin-bottom: 40px;
@@ -928,7 +928,7 @@ ul li {
 .quote-post span {
     color: #0099FF;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     margin: 0;
 }
@@ -964,7 +964,7 @@ ul li {
     text-align: center;
     text-decoration: none;
     line-height: 62px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     color: #000;
     font-weight: 300;
@@ -1019,7 +1019,7 @@ ul li {
     background: #fff;
     color: #000 !important;
     font-size: 20px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
@@ -1048,7 +1048,7 @@ ul li {
 .sidebar h1 {
   color: #000;
 font-size: 24px;
-font-family: 'Courier New', sans-serif;
+font-family: 'Ubuntu', sans-serif;
 font-weight: 300;
 margin: 0 0 5px;
 line-height: 30px;
@@ -1091,7 +1091,7 @@ line-height: 30px;
 .about-section h1 {
     color: #000;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     margin: 0 0 5px;
     line-height: 30px;    
@@ -1105,7 +1105,7 @@ line-height: 30px;
 .about-section p {
   font-size: 15px;
   color: #a3a3a3;
-  font-family: 'Courier New';
+  font-family: 'Ubuntu';
   line-height: 23px;
 }
 
@@ -1136,7 +1136,7 @@ line-height: 30px;
     width: 100%;
     height: 100%;
     background: #0099FF;
-    background: rgba(255,237,39,0.9);
+    background: rgba(0,153,255,0.9);
     text-align: center;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -1173,7 +1173,7 @@ line-height: 30px;
 .team-post h3 {
     color: #000;
     font-size: 16px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 16px;
     text-transform: uppercase;
     margin: 0;
@@ -1182,7 +1182,7 @@ line-height: 30px;
 .team-post span {
     color: #000;
     font-size: 13px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 16px;
     margin: 0;
@@ -1195,7 +1195,7 @@ line-height: 30px;
 .skills-progress p {
     color: #000000;
     font-size: 13px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 26px;
     clear: both;
@@ -1236,7 +1236,7 @@ line-height: 30px;
 .client-test h3 {
     color: #000;
     font-size: 15px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     padding: 27px 25px;
     margin: 0;
     margin-left: 80px;
@@ -1247,7 +1247,7 @@ line-height: 30px;
 .testimonial p {
     color: #a3a3a3;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 30px;
     margin: 0;
@@ -1271,7 +1271,7 @@ line-height: 30px;
     display: inline-block;
     color: #848484;
     font-size: 14px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 28px;
     text-decoration: none;
@@ -1351,7 +1351,7 @@ line-height: 30px;
 .contact-box h1 {
     color: #000000;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 26px;
     margin: 0 0 10px;
@@ -1359,7 +1359,7 @@ line-height: 30px;
 .login-box h1 {
     color: #000000;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 26px;
     
@@ -1373,7 +1373,7 @@ line-height: 30px;
 .contact-info p {
     color: #a3a3a3;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 30px;
     margin: 0 0 20px;
@@ -1381,7 +1381,7 @@ line-height: 30px;
 .login-info p {
     color: #a3a3a3;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 30px;
     
@@ -1455,7 +1455,7 @@ line-height: 30px;
 .comment-form textarea {
     color: #848484;
     font-size: 14px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     border: 1px solid #eaeaea;
     border-left: none;
     font-weight: 300;
@@ -1494,7 +1494,7 @@ line-height: 30px;
     text-align: center;
     color: #000;
     font-size: 19px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     padding: 15px;
     background: #0099FF;
@@ -1551,7 +1551,7 @@ margin: 10px 0 20px;
 .service-section h1 {
 color: #000;
 font-size: 24px;
-font-family: 'Courier New', sans-serif;
+font-family: 'Ubuntu', sans-serif;
 font-weight: 300;
 margin: 0 0 5px;
 line-height: 30px;
@@ -1560,7 +1560,7 @@ line-height: 30px;
 .service-section p {
 color: #a3a3a3;
 font-size: 15px;
-font-family: 'Courier New', sans-serif;
+font-family: 'Ubuntu', sans-serif;
 margin: 0 0 20px;
 line-height: 22px;
 }
@@ -1736,7 +1736,7 @@ line-height: 22px;
 }
 
 .tabs-widget .tab-links li a {
-    font-family: 'Courier New';
+    font-family: 'Ubuntu';
     color: #000;
     font-size: 13px;
     text-transform: uppercase;
@@ -1867,7 +1867,7 @@ line-height: 22px;
 .sidebar h1 {
     color: #000;
     font-size: 24px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     margin: 0 0 7px;
     line-height: 30px;
@@ -1877,7 +1877,7 @@ line-height: 22px;
 .about-section p {
     color: #a3a3a3;
     font-size: 18px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     margin: 0 0 25px;
     line-height: 30px;
@@ -1958,7 +1958,7 @@ line-height: 22px;
     display: inline-block;
     color: #848484;
     font-size: 14px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 32px;
 }
@@ -1979,7 +1979,7 @@ line-height: 22px;
     text-align: center;
     text-decoration: none;
     line-height: 40px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 13px;
     color: #000;
     font-weight: 300;
@@ -2048,7 +2048,7 @@ line-height: 22px;
     display: inline-block;
     color: #a3a3a3;
     font-size: 13px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     padding: 9px 17px;
     border-radius: 10px;
@@ -2072,7 +2072,7 @@ line-height: 22px;
     display: inline-block;
     color: #848484;
     font-size: 14px;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     text-decoration: none;
     line-height: 28px;
