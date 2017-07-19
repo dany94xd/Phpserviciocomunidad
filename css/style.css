@@ -573,8 +573,8 @@ ul li {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   background-color: rgb(250,231,46);
-   background-color: rgba(250,231,46, 0.9);
+   background-color: rgb(0,153,255);
+   background-color: rgba(0,153,255, 0.9);
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
@@ -926,7 +926,7 @@ ul li {
 }
 
 .quote-post span {
-    color: #f5e326;
+    color: #0099FF;
     font-size: 18px;
     font-family: 'Courier New', sans-serif;
     font-weight: 300;
