@@ -147,6 +147,25 @@ ul.drop-down li a {
     border-bottom: 1px dashed #000;
     border-right: 1px dashed #000;
 }
+ul.sidebar-submenu > li > a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 1px 24px;
+    font-size: 20px;
+    font-family: 'noodle', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    transition: all 0.3 linear;
+    -moz-transition: all 0.3 linear;
+    -webkit-transition: all 0.3 linear;
+    -o-transition: all 0.3 linear;
+    background: #222222;
+    border-bottom: 1px dashed #000;
+    border-right: 1px dashed #000;
+}
+ul.menu > li > a:not(:only-child):before{font-family:Material Icons;content:"";position:absolute;right:18.75px;display:block;font-size:15px}
 
 ul.menu li:first-child a {
     border-top: 1px dashed #000;
