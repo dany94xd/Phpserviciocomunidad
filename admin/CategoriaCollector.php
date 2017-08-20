@@ -18,9 +18,9 @@ class CategoriaCollector extends Collector
   }
 function showCategoria($id) {
     $rows = self::$db->getRows("SELECT * FROM comunidad where id_categoria= ? ", array ("{$id}"));        
-$ObjDemo= new Demo($rows[0]{'iddemo'},$rows[0]{'nombre'});
+$ObjCategoria= new Categoria($rows[0]{'id_categoria'},$rows[0]{'nombre'});
     
-    return $ObjDemo;        
+    return $ObjCategoria;        
   }
 function UpdateCategoria($id,$nombre) {
     $insertrow = self::$db->updateRow("UPDATE public.Categoria SET nombre = ? where id_categoria= ? ", array ("{$nombre}",$id));
