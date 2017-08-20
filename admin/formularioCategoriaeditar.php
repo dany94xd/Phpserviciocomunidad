@@ -26,7 +26,7 @@ $ObjCategoria=$CategoriaCollectorObj->showCategoria($id);
 print_r($ObjCategoria);
 ?>
 <h2>Editar Tabla Categoria</h2>
-<form id="contact-form" action="actualizar.php" method= "post">
+<form id="contact-form" action="updateCategoria.php" method= "post">
 <div style="height: 20px;"></div>
 <div class="text-fieldsl">
 <div class="float-input">
