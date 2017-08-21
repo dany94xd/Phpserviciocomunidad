@@ -41,10 +41,10 @@ class Denunciante
      function getEmail(){
        return $this->email;
      } 
-     function setUsuario($id_usuario){
+     function setIdUsuario($id_usuario){
        $this->id_usuario = $id_usuario;
      } 
-     function getUsuario(){
+     function getIdUsuario(){
        return $this->id_usuario;
      } 
 }
