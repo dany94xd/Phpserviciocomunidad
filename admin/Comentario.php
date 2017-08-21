@@ -27,5 +27,21 @@
 		function setIdDenunciante($id_denunciante){
 			$this->id_denunciante = $id_denunciante;
 		}
+
+		function getIdComentario(){
+			return $this->id_comentario;
+		}
+
+		function getDescripcion(){
+			return $this->descripcion;
+		}
+
+		function getIdDenuncia(){
+			return $this->id_denuncia;
+		}
+
+		function getIdDenunciante(){
+			return $this->id_denunciante;
+		}
 	}
  ?>
