@@ -24,11 +24,11 @@ include_once("CategoriaCollector.php");
 
 $id =1;
 
-$DemoCollectorObj = new DemoCollector();
+$CategoriaCollectorObj = new CategoriaCollector();
 
-foreach ($DemoCollectorObj->showCategorias() as $c){
+foreach ($CategoriaCollectorObj->showCategorias() as $c){
   echo "<div>";
-  echo $c->getCategoria() . "  && " .$c->getNombre()."<a href='formularioDemoeditar.php?id=".$c->getCategoria()."'>Editar</a> <a href='eliminar.php?id=".$c->getIdDemo()."'>Eliminar</a>";                                     
+  echo $c->getCategoria() . "  && " .$c->getNombre()."<a href='formularioCategoriaeditar.php?id=".$c->getCategoria()."'>Editar</a> <a href='eliminar.php?id=".$c->getIdDemo()."'>Eliminar</a>";                                     
   echo "</div>"; 
 }
 
