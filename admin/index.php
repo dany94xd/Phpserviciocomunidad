@@ -5,8 +5,31 @@ session_start();
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<meta charset ="utf-8">
-		<title> FORMULARIO</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+		<style type="text/css">
+		body{
+			margin: 0px;
+		}
+		h1{
+			font-family: 'Roboto','sans-serif';
+			padding: 50px;
+			background-color: #0099FF;
+			color: white;
+
+		}
+			body{text-align: center;}
+			input{
+				border: 1px solid gray;
+				padding: 30px;
+				margin: 5px;
+			}
+			.main-button{
+				padding: 20px 80px;
+				color: #000;
+				background-color: #0099FF;
+				border: none;
+			}
+		</style>
 	</head>
 <body>
 <header>
@@ -17,24 +40,20 @@ session_start();
 
 </section>
 <aside>
-<?php
+<!-- <?php
 if (isset($_SESSION['MiSession'])) {
 echo "<p> hola usuario:(".$_SESSION['MiSession'].") [<a href='salir.php'>Salir</a>]</p>";
 include_once("CategoriaCollector.php");
 
 $id =1;
 
-$CategoriaCollectorObj = new CategoriaCollector();
-
-foreach ($CategoriaCollectorObj->showCategorias() as $c){
-  echo "<div>";
-  echo $c->getCategoria() . "  && " .$c->getNombre()."<a href='formularioCategoriaeditar.php?id=".$c->getCategoria()."'>Editar</a> <a href='eliminar.php?id=".$c->getIdDemo()."'>Eliminar</a>";                                     
-  echo "</div>"; 
-}
-
 }
 else {
-?>
+?> -->
+
+<h1>Iniciar Sesión</h1>
+<div><img src="../images/usuario.png"></div>
+
 <form id="contact-form" action="login.php" method= "post">
 <div style="height: 20px;"></div>
 <div class="text-fieldsl">
@@ -52,5 +71,16 @@ else {
 </form>
 <?php } ?>
 </aside>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.migrate.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
+  	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/gmap3.min.js"></script>
+	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
