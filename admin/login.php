@@ -7,31 +7,41 @@ session_start();
 	<head>
 		<meta charset ="utf-8">
 		<title> PSW + Cookie pagina +NOMBRE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
 	</head>
 <body>
 <header>
-<nav>
-<a href="inicio.html">Inicio</a>
-<a href="inicio.html">Nosotros</a>
-<a href="inicio.html">Servicios</a>
-<a href="inicio.html">Contactenos</a>
-</nav>
-</header>
-<section>
-</section>
-<section id="main">
-<?php
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Tu Voz Ciudadana</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+          <li><a href="#">Menu</a></li>
+  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <?php
 $_SESSION['MiSession']= $_POST['usuario'];
 $nombre= $_POST['usuario'];
 $password= $_POST['clave'];
 
-echo "Usuario: ".$nombre. " y contraseña: ".$password;
-
-echo "<a href='index.php'>Volver</a>"
-
-
+echo "<li><a href='#''><span class='glyphicon glyphicon-user'></span> $nombre</a></li>";
+echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
 ?>
-</section>
+      
+    </ul>
+  </div>
+</nav>
+
+
+
 
 </body>
 </html>
