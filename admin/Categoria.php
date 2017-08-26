@@ -2,19 +2,19 @@
 
 class Categoria
 {
-    private $id_categoria;
+    private $idcategoria;
     private $nombre;
     
-     function __construct($id_categoria, $nombre) {
-       $this->id_categoria = $id_categoria;
+     function __construct($idcategoria, $nombre) {
+       $this->idcategoria = $idcategoria;
        $this->nombre = $nombre;
      }
     
-     function setIdcategoria($id_categoria){
-       $this->id_categoria = $id_categoria;
+     function setIdcategoria($idcategoria){
+       $this->idcategoria = $idcategoria;
      } 
-     function getcategoria(){
-       return $this->id_categoria;
+     function getIdCategoria(){
+       return $this->idcategoria;
      } 
      function setNombre($nombre){
        $this->nombre = $nombre;

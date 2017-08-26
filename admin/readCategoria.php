@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Actualizar Categoria </title>
+		<title> Tabla Categoria </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,7 +14,9 @@ session_start();
    <link href="../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+<header>
 
+</header>
 <section>
 </section>
 <section>
@@ -23,12 +25,12 @@ session_start();
 <aside>
 <?php
 
-echo "<nav class='navbar navbar-default'>";
+ echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='createCargo.php'>Nuevo</a></li>";
+			echo "<li><a href='crearcategoria.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -37,40 +39,39 @@ echo "<nav class='navbar navbar-default'>";
     echo "</div>";
     echo "</nav>";
 
+include_once("CategoriaCollector.php");
+$CategoriaCollectorObj = new CategoriaCollector();
+
+echo "<div class='container'>";
+echo "<h2>Categorias</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Nombre</th>";  
+echo "</tr>"; 
+echo "</thead>"; 
+
+foreach ($CategoriaCollectorObj->showCategorias() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdCategoria()."</td>"; 
+echo "<td>".$c->getNombre()."</td>";
+
+    echo "<td><a href='updateCategoria.php?id=".$c->getIdCategoria()."&nombre=".$c->getNombre()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteCategoria.php?id=".$c->getIdCategoria()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
 
 
-$id=$_GET['id'];
-$nombre=$_GET['nombre'];
-
-
-
-echo "Edicion en proceso . . . . </br>";
+}
+echo "</tbody>";
+echo "</table>";
+echo "</div>";
+echo "</div>";
 
 ?>
-
-<form method= "POST" class="form-horizontal" action= "Guardarcategoria.php?usuario=" >
-     <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Código:</label>
-         <div class="col-xs-10">
-             <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>" readonly>
-         </div>
-     </div>
-     <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Nombre:</label>
-         <div class="col-xs-10">
-             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>">
-         </div>
-     </div>
-     <div class="form-group">
-         <div class="col-xs-offset-2 col-xs-10">
-             <button type="submit" class="btn btn-primary">Grabar</button>
-         </div>
-     </div>
-</form>
-
-
-
 </aside>
 </body>
 </html>
