@@ -6,7 +6,12 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> FORMULARIO EDITAR TIPO DE USUARIO</title>
+		<title> Actualizar Tipo de Usuario </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
 
@@ -17,32 +22,61 @@ session_start();
 </section>
 <aside>
 <?php
-$id=$_GET["id"];
-echo "el valor de id es ".$id;
+
+echo "<nav class='navbar navbar-default'>";
+    echo "<div class='container-fluid'>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Tipo de Usuario</a></div>";
+    echo " <ul class='nav navbar-nav'>";
+		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
+			echo "<li><a href='newTipoUsuario.php'>Nuevo</a></li>";
+		echo "</ul>";
+    echo " <ul class='nav navbar-nav navbar-right'>";
+    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
+    echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
+    echo "</ul>";
+    echo "</div>";
+    echo "</nav>";
+
+
+
+$id=$_GET['id'];
+
 include_once("TipoUsuarioCollector.php");
 include_once("TipoUsuario.php");
 $TipoUsuarioCollectorObj= new TipoUsuarioCollector();
 $ObjTipoUsuario=$TipoUsuarioCollectorObj->showTipoUsuario($id);
-print_r($ObjTipoUsuario);
+
+
+echo "Edicion en proceso . . . . </br>";
+
 ?>
-<h2>Editar Objeto Provincia</h2>
-<form id="contact-form" action="updateTipoUsuario.php" method= "post">
-<div style="height: 20px;"></div>
-<div class="text-fieldsl">
-<div class="float-input">
-ID:	 <input name="idtipousuario" id="idtipousuario" type="text" value="<?php echo $ObjTipoUsuario->getIdTipoUsuario(); ?>" readonly />
-<span><i class="fa fa-user"></i></span>
-</div>
-<div class="float-input">
-TIPO:	<input name="tipo" id="tipo" type="text" value="<?php echo $ObjTipoUsuario->getTipo(); ?>"  autofocus required/>
-<span><i class="fa fa-lock"></i></span>
-</div>
-<a href="readTipoUsuario.php">Cancelar</a>
-<input type="submit" id="submit_save" class="main-button" value="Guardar"/>
-                                                          
-</div>
+
+<form method= "post" class="form-horizontal" action= "updateTipoUsuario.php" >
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Código:</label>
+         <div class="col-xs-10">
+             <input name = "idtipousuario" type="text" id= "idtipousuario" class="form-control"
+ placeholder="Codigo" value="<?php echo $ObjTipoUsuario->getIdTipoUsuario(); ?>" readonly>
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Tipo:</label>
+         <div class="col-xs-10">
+             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" value="<?php echo $ObjTipoUsuario->getTipo(); ?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <div class="col-xs-offset-2 col-xs-10">
+             <button type="submit" class="btn btn-primary">Grabar</button>
+         </div>
+     </div>
 </form>
+
+
 
 </aside>
 </body>
 </html>
+
+
+
