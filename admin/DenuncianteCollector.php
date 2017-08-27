@@ -8,7 +8,6 @@ class DenuncianteCollector extends Collector
   
   function showDenunciantes() {
     $rows = self::$db->getRows("SELECT * FROM denunciante ");        
-    echo "linea 1";
     $arrayDenunciante= array();        
     foreach ($rows as $c){
       $aux = new Denunciante($c{'id_denunciante'},$c{'nombre'},$c{'apellido'},$c{'email'},$c{'id_usuario'});

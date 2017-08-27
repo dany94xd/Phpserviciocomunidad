@@ -24,7 +24,7 @@ session_start();
 <?php
 echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Tipo de Usuario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
