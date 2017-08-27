@@ -6,7 +6,12 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> FORMULARIO EDITAR USUARIO</title>
+		<title> Actualizar Usuario </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
 
@@ -17,40 +22,76 @@ session_start();
 </section>
 <aside>
 <?php
-$id=$_GET["id"];
-echo "el valor de id es ".$id;
+
+echo "<nav class='navbar navbar-default'>";
+    echo "<div class='container-fluid'>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
+    echo " <ul class='nav navbar-nav'>";
+		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
+			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
+		echo "</ul>";
+    echo " <ul class='nav navbar-nav navbar-right'>";
+    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
+    echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
+    echo "</ul>";
+    echo "</div>";
+    echo "</nav>";
+
+
+
+$id=$_GET['id'];
+
 include_once("UsuarioCollector.php");
 include_once("Usuario.php");
 $UsuarioCollectorObj= new UsuarioCollector();
 $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
-print_r($ObjUsuario);
+
+
+echo "Edicion en proceso . . . . </br>";
+
 ?>
-<h2>Editar Objeto Usuario</h2>
-<form id="contact-form" action="updateUsuario.php" method= "post">
-<div style="height: 20px;"></div>
-<div class="text-fieldsl">
-<div class="float-input">
-ID:	 <input name="idusuario" id="idusuario" type="text" value="<?php echo $ObjUsuario->getIdUsuario(); ?>" readonly />
-<span><i class="fa fa-user"></i></span>
-</div>
-<div class="float-input">
-USUARIO:	<input name="usuario" id="usuario" type="text" value="<?php echo $ObjUsuario->getUsuario(); ?>"  autofocus required/>
-<span><i class="fa fa-lock"></i></span>
-</div>
-<div class="float-input">
-CONTRASEÑA:	 <input name="contrasenia" id="contrasenia" type="text" value="<?php echo $ObjUsuario->getContrasenia(); ?>"  />
-<span><i class="fa fa-user"></i></span>
-</div>
-<div class="float-input">
-TIPO DE USUARIO:	<input name="tipousuario" id="tipousuario" type="text" value="<?php echo $ObjUsuario->getTipoUsuario(); ?>" />
-<span><i class="fa fa-lock"></i></span>
-</div>
-<a href="readUsuario.php">Cancelar</a>
-<input type="submit" id="submit_save" class="main-button" value="Guardar"/>
-                                                          
-</div>
+
+<form method= "post" class="form-horizontal" action= "updateUsuario.php" >
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Código:</label>
+         <div class="col-xs-10">
+             <input name = "idusuario" type="text" id= "idusuario" class="form-control"
+ placeholder="Codigo" value="<?php echo $ObjUsuario->getIdUsuario(); ?>" readonly/>
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Usuario:</label>
+         <div class="col-xs-10">
+             <input name = "usuario" type="text" id= "usuario" class="form-control" placeholder="usuario" value="<?php echo $ObjUsuario->getUsuario(); ?>"autofocus required/>
+         </div>
+     </div>
+  <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Contraseña:</label>
+         <div class="col-xs-10">
+             <input name = "contrasenia" type="text" id= "contrasenia" class="form-control"
+ placeholder="Contraseña" value="<?php echo $ObjUsuario->getContrasenia(); ?>" />
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Tipo de Usuario:</label>
+         <div class="col-xs-10">
+             <input name = "tipousuario" type="text" id= "tipousuario" class="form-control" placeholder="Tipo usuario" value="<?php echo $ObjUsuario->getTipoUsuario(); ?>"/>
+         </div>
+     </div>
+      
+     <div class="form-group">
+         <div class="col-xs-offset-2 col-xs-10">
+             <button type="submit" class="btn btn-primary">Grabar</button>
+         </div>
+     </div>
 </form>
+
+
 
 </aside>
 </body>
 </html>
+
+
+
+

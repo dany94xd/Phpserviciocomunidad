@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Usuario Actualizado </title>
+		<title> Tabla Usuario </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -39,32 +39,46 @@ session_start();
     echo "</div>";
     echo "</nav>";
 
-
-$idusuario=$_POST["idusuario"];
-$usuario=$_POST["usuario"];
-$contrasenia=$_POST["contrasenia"];
-$tipousuario=$_POST["tipousuario"];
-
 include_once("UsuarioCollector.php");
-$UsuarioCollectorObj= new UsuarioCollector();
-$UsuarioCollectorObj->updateUsuario($idusuario,$usuario, $contrasenia, $tipousuario);
-
-
-echo "<br>";
+$UsuarioCollectorObj = new UsuarioCollector();
 
 echo "<div class='container'>";
-echo "  <h2>Cargos</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$usuario</div>";
-echo "  </div>";
-echo "</div>";
- 
+echo "<h2>Usuario</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Usuario</th>"; 
+echo " 	   <th>Contraseña</th>"; 
+echo "     <th>Tipo de Usuario</th>";  
+echo "</tr>"; 
+echo "</thead>"; 
 
+foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdUsuario()."</td>"; 
+echo "<td>".$c->getUsuario()."</td>";
+echo "<td>".$c->getContrasenia()."</td>"; 
+echo "<td>".$c->getTipoUsuario()."</td>";
+
+    echo "<td><a href='formularioUsuarioeditar.php?id=".$c->getIdUsuario()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteUsuario.php?id=".$c->getIdUsuario()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+
+
+}
+echo "</tbody>";
+echo "</table>";
+echo "</div>";
+echo "</div>";
 
 ?>
 </aside>
 </body>
 </html>
+
 
 
