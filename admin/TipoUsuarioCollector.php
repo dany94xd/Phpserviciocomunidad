@@ -30,6 +30,9 @@ function deleteTipoUsuario($id) {
     $deleterow = self::$db->deleteRow("DELETE FROM public.tipousuario where idtipousuario= ? ", array ("{$id}"));
 
 }
+function insertTipoUsuario($tipo) {
+    $rows = self::$db->insertRow("INSERT INTO public.tipousuario(tipo) VALUES (?)", array ("{$tipo}"));             
+  }
 
 
 }
