@@ -24,7 +24,7 @@
 		}
 
 		function updateAutoridad($id_autoridad,$nombre,$telefono,$email,$id_tipo_autoridad,$id_usuario){
-			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ? WHERE id_autoridad = ?", array ("{$nombre},{$telefono},{$email}",$id_autoridad));
+			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ?, id_tipoautoridad = ?, id_usuario = ? WHERE id_autoridad = ?", array ("{$nombre},{$telefono},{$email},{$id_tipoautoridad},{$id_usuario}",$id_autoridad));
 
 		}
 
