@@ -60,7 +60,7 @@ session_start();
     echo "<div id='contenidos'>";
     echo "<div id='columna1'><a href='readCategoria.php'>Categorias</div>";
     echo "<div id='columna2'><a href='readLabor.php'>Denuncia</div>";
-    echo "<div id='columna3'><a href='readPeriodo.php'>Comentario</div>";
+    echo "<div id='columna3'><a href='readComentario.php'>Comentario</div>";
     echo "<div id='columna4'><a href='readDenunciante.php'>Denunciante</div>";
     echo "</div>";
     echo "<div id='contenidos'>";

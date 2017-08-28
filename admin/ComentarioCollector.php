@@ -16,6 +16,7 @@
 				$aux = new Comentario($c{'id_comentario'},$c{'descripcion'},$c{'id_denuncia'},$c{'id_denunciante'});
 				array_push($arrayComentario, $aux);
 			}
+			return $arrayComentario;
 		}
 
 		function showComentario($id){
