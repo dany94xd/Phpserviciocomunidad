@@ -17,12 +17,12 @@ class DenuncianteCollector extends Collector
   }
 function showDenunciante($id) {
     $rows = self::$db->getRows("SELECT * FROM denunciante where id_denunciante= ? ", array ("{$id}"));        
-$ObjDenunciante= new Denunciante($rows[0]{'idprovincia'},$rows[0]{'nombre'},$rows{'apellido'},$rows{'email'},$rows{'id_usuario'});
+$ObjDenunciante= new Denunciante($rows[0]{'id_denunciante'},$rows[0]{'nombre'},$rows[0]{'apellido'},$rows[0]{'email'},$rows[0]{'id_usuario'});
     
     return $ObjDenunciante;        
   }
 function updateDenunciante($id,$nombre, $apellido, $email, $id_usuario) {
-    $insertrow = self::$db->updateRow("UPDATE public.denunciante SET nombre = ?, apellido = ?, email = ?, id_usuario = ?, where id_denunciante= ? ", array ("{$nombre}","{$apellido}","{$email}","{$id_usuario}",$id));
+    $insertrow = self::$db->updateRow("UPDATE public.denunciante SET nombre = ?, apellido = ?, email = ?, id_usuario = ? where id_denunciante= ? ", array ("{$nombre}","{$apellido}","{$email}","{$id_usuario}",$id));
 
 }
 function deleteDenunciante($id) {
