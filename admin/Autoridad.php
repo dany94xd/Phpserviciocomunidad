@@ -2,24 +2,24 @@
 
 class Autoridad 
 {
-	private $id_autoridad;
+	private $idautoridad;
 	private $nombre;
 	private $telefono;
 	private $email;
-	private $id_tipo_autoridad;
+	private $id_tipoautoridad;
 	private $id_usuario;
 
-	function __construct($id_autoridad,$nombre,$telefono,$email,$id_tipo_autoridad,$id_usuario){
-			$this->id_autoridad = $id_autoridad;
+	function __construct($idautoridad,$nombre,$telefono,$email,$id_tipoautoridad,$id_usuario){
+			$this->idautoridad = $idautoridad;
 			$this->nombre = $nombre;
 			$this->telefono = $telefono;
 			$this->email = $email;
-			$this->id_tipo_autoridad = $id_tipo_autoridad;
+			$this->id_tipoautoridad = $id_tipoautoridad;
 			$this->id_usuario = $id_usuario;
 	}
 
-	function setIdAutoridad($id_autoridad){
-		$this->id_autoridad = $id_autoridad;
+	function setIdAutoridad($idautoridad){
+		$this->idautoridad = $idautoridad;
 	}
 	function setNombre($nombre){
 		$this->nombre = $nombre;
@@ -30,15 +30,15 @@ class Autoridad
 	function setEmail($email){
 		$this->email = $email;
 	}
-	function setIdTipoAutoridad($id_tipo_autoridad){
-		$this->id_tipo_autoridad = $id_tipo_autoridad;
+	function setIdTipoAutoridad($id_tipoautoridad){
+		$this->id_tipoautoridad = $id_tipoautoridad;
 	}
 	function setIdUsuario($id_usuario){
 		$this->id_usuario = $id_usuario;
 	}
 
 	function getIdAutoridad(){
-		return $this->id_autoridad;
+		return $this->idautoridad;
 	}
 	function getNombre(){
 		return $this->nombre;
@@ -50,7 +50,7 @@ class Autoridad
 		return $this->email;
 	}
 	function getIdTipoAutoridad(){
-		return $this->id_tipo_autoridad;
+		return $this->id_tipoautoridad;
 	}
 	function getIdUsario(){
 		return $this->id_usuario;

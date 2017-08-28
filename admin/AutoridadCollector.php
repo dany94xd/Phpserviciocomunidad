@@ -8,13 +8,13 @@
 	class AutoridadCollector extends Collector
 	{
 		function showAutoridades(){
-			$rows = self::$db->getRows("SELECT * FROM autoridad");
-			echo "linea 1";
+			$rows = self::$db->getRows("SELECT idautoridad, nombre, telefono, email, id_tipoautoridad, id_usuario FROM autoridad");
 			$arrayAutoridad = array();
 			foreach ($rows as $c) {
-				$aux = new Autoridad($c{'id_autoridad'},$c{'nombre'},$c{'telefono'},$c{'email'},$c{'id_tipo_autoridad'},$c{'id_usuario'});
+				$aux = new Autoridad($c{'idautoridad'},$c{'nombre'},$c{'telefono'},$c{'email'},$c{'id_tipoautoridad'},$c{'id_usuario'});
 				array_push($arrayAutoridad, $aux);
 			}
+			return $arrayAutoridad;
 		}
 
 		function showAutoridad($id){
