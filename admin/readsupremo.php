@@ -55,7 +55,7 @@ session_start();
     echo "<div id='columna1' ><a href='readUsuario.php'>Usuario</a></div>";
     echo "<div id='columna2'><a href='readTipoUsuario.php'>TipoUsuario</div>";
     echo "<div id='columna3'><a href='readAutoridad.php'>Autoridad</div>";
-    echo "<div id='columna4'><a href='readCultivoLote.php'>Tipo de Autoridad</div>";
+    echo "<div id='columna4'><a href='readTipoAutoridad.php'>Tipo de Autoridad</div>";
     echo "</div>";
     echo "<div id='contenidos'>";
     echo "<div id='columna1'><a href='readCategoria.php'>Categorias</div>";
