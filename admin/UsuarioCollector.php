@@ -29,6 +29,9 @@ function deleteUsuario($id) {
     $deleterow = self::$db->deleteRow("DELETE FROM public.usuario where idusuario= ? ", array ("{$id}"));
 
 }
+function insertUsuario($usuario, $contrasenia, $tipousuario) {
+    $rows = self::$db->insertRow("INSERT INTO public.usuario(usuario, contrasenia, tipousuario) VALUES (?,?,?)", array ("{$usuario}","{$contrasenia}","{$tipousuario}"));             
+  }
 
 
 }
