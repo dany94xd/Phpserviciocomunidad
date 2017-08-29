@@ -13,7 +13,7 @@ class Categoria
      function setIdcategoria($id_categoria){
        $this->id_categoria = $id_categoria;
      } 
-     function getcategoria(){
+     function getIdCategoria(){
        return $this->id_categoria;
      } 
      function setNombre($nombre){

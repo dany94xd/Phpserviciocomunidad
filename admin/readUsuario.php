@@ -6,16 +6,16 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Usuario </title>
+		<title> Tabla Usuario </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
 <header>
-<nav>
-<a href="inicio.html">Inicio</a>
-<a href="inicio.html">Nosotros</a>
-<a href="inicio.html">Servicios</a>
-<a href="inicio.html">Contactenos</a>
-</nav>
+
 </header>
 <section>
 </section>
@@ -24,20 +24,61 @@ session_start();
 </section>
 <aside>
 <?php
+
+ echo "<nav class='navbar navbar-default'>";
+    echo "<div class='container-fluid'>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
+    echo " <ul class='nav navbar-nav'>";
+		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
+			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
+		echo "</ul>";
+    echo " <ul class='nav navbar-nav navbar-right'>";
+    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
+    echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
+    echo "</ul>";
+    echo "</div>";
+    echo "</nav>";
+
 include_once("UsuarioCollector.php");
-
-$id =1;
-
 $UsuarioCollectorObj = new UsuarioCollector();
 
-foreach ($UsuarioCollectorObj->showUsuarios() as $c){
-  echo "<div>";
-  echo $c->getIdUsuario() . "  && " .$c->getUsuario()."  && " .$c->getContrasenia()."  && " .$c->getTipoUsuario()."<a href='formularioUsuarioeditar.php?id=".$c->getIdUsuario()."'>Editar</a> <a href='deleteUsuario.php?id=".$c->getIdUsuario()."'>Eliminar</a>";                                      
-  echo "</div>"; 
-}
+echo "<div class='container'>";
+echo "<h2>Usuario</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Usuario</th>"; 
+echo " 	   <th>Contraseña</th>"; 
+echo "     <th>Tipo de Usuario</th>";  
+echo "</tr>"; 
+echo "</thead>"; 
 
+foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdUsuario()."</td>"; 
+echo "<td>".$c->getUsuario()."</td>";
+echo "<td>".$c->getContrasenia()."</td>"; 
+echo "<td>".$c->getTipoUsuario()."</td>";
+
+    echo "<td><a href='formularioUsuarioeditar.php?id=".$c->getIdUsuario()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteUsuario.php?id=".$c->getIdUsuario()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+
+
+}
+echo "</tbody>";
+echo "</table>";
+echo "</div>";
+echo "</div>";
 
 ?>
 </aside>
 </body>
 </html>
+
+
+

@@ -2,21 +2,21 @@
 
 class EstadoDenuncia
 {
-    private $id_estado_denunciante;
+    private $id_estado_denuncian;
     private $nombre;
 
     
-     function __construct($id_estado_denunciante, $nombre) {
-       $this->id_estado_denunciante = $id_estado_denunciante;
+     function __construct($id_estado_denuncia, $nombre) {
+       $this->id_estado_denuncia = $id_estado_denuncia;
        $this->nombre = $nombre;
       
      }
     
-     function setIdEstadoDenunciante($id_estado_denunciante){
-       $this->id_estado_denunciante = $id_estado_denunciante;
+     function setIdEstadoDenuncia($id_estado_denuncia){
+       $this->id_estado_denuncia = $id_estado_denuncia;
      } 
-     function getIdDenunciante(){
-       return $this->id_estado_denunciante;
+     function getIdEstadoDenuncia(){
+       return $this->id_estado_denuncia;
      } 
      function setNombre($nombre){
        $this->nombre = $nombre;

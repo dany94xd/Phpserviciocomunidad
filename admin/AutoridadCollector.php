@@ -8,13 +8,13 @@
 	class AutoridadCollector extends Collector
 	{
 		function showAutoridades(){
-			$rows = self::$db->getRows("SELECT * FROM autoridad");
-			echo "linea 1";
+			$rows = self::$db->getRows("SELECT idautoridad, nombre, telefono, email, id_tipoautoridad, id_usuario FROM autoridad");
 			$arrayAutoridad = array();
 			foreach ($rows as $c) {
-				$aux = new Autoridad($c{'id_autoridad'},$c{'nombre'},$c{'telefono'},$c{'email'},$c{'id_tipo_autoridad'},$c{'id_usuario'});
+				$aux = new Autoridad($c{'idautoridad'},$c{'nombre'},$c{'telefono'},$c{'email'},$c{'id_tipoautoridad'},$c{'id_usuario'});
 				array_push($arrayAutoridad, $aux);
 			}
+			return $arrayAutoridad;
 		}
 
 		function showAutoridad($id){
@@ -24,7 +24,7 @@
 		}
 
 		function updateAutoridad($id_autoridad,$nombre,$telefono,$email,$id_tipo_autoridad,$id_usuario){
-			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ? WHERE id_autoridad = ?", array ("{$nombre},{$telefono},{$email}",$id_autoridad));
+			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ?, id_tipoautoridad = ?, id_usuario = ? WHERE id_autoridad = ?", array ("{$nombre},{$telefono},{$email},{$id_tipoautoridad},{$id_usuario}",$id_autoridad));
 
 		}
 

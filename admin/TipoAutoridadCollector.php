@@ -9,12 +9,12 @@
 	{
 		function showTiposAutoridades(){
 			$rows = self::$db->getRows("SELECT * FROM tipoautoridad");
-			echo "linea 1";
 			$arrayTipoAutoridad = array();
 			foreach ($rows as $c) {
-				$aux = new TipoAutoridad($c{'id_tipo_autoridad'},$c{'nombre'});
-				array_push($arrayAutoridad, $aux);
+				$aux = new TipoAutoridad($c{'id_tipoautoridad'},$c{'nombre'});
+				array_push($arrayTipoAutoridad, $aux);
 			}
+			return $arrayTipoAutoridad;
 		}
 
 		function showTipoAutoridad($id){

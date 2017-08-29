@@ -1,5 +1,5 @@
 <?php 
-	<?php 
+
 	include_once('Comentario.php');
 	include_once('Collector.php');
 
@@ -10,12 +10,13 @@
 	{
 		function showComentarios(){
 			$rows = self::$db->getRows("SELECT * FROM comentario");
-			echo "linea 1";
+		
 			$arrayComentario = array();
 			foreach ($rows as $c) {
 				$aux = new Comentario($c{'id_comentario'},$c{'descripcion'},$c{'id_denuncia'},$c{'id_denunciante'});
 				array_push($arrayComentario, $aux);
 			}
+			return $arrayComentario;
 		}
 
 		function showComentario($id){
@@ -34,5 +35,5 @@
 		}
 	}
 
- ?>
+
  ?>
