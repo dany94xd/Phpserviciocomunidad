@@ -33,6 +33,10 @@
 		function deleteComentario($id){
 			$deleteRow = self::$db->deleteRow("DELETE FROM public.comentario WHERE id_comentario = ?" , array ("{$id}"));
 		}
+
+		function insertComentario($descripcion) {
+    $rows = self::$db->insertRow("INSERT INTO public.comentario(descripcion) VALUES (?)", array ("{$descripcion}"));             
+  }
 	}
 
 

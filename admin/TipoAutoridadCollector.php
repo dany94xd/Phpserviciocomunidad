@@ -31,6 +31,10 @@
 		function deleteTipoAutoridad($id){
 			$deleteRow = self::$db->deleteRow("DELETE FROM public.tipoautoridad WHERE id_tipo_autoridad = ?" , array ("{$id}"));
 		}
+
+		function insertTipoAutoridad($nombre) {
+    $rows = self::$db->insertRow("INSERT INTO public.TipoAutoridad(nombre) VALUES (?)", array ("{$nombre}"));             
+  }
 	}
 
  ?>

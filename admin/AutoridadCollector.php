@@ -31,6 +31,10 @@
 		function deleteAutoridad($id){
 			$deleteRow = self::$db->deleteRow("DELETE FROM public.autoridad WHERE id_autoridad = ?" , array ("{$id}"));
 		}
+
+		function insertAutoridad($nombre,$telefono,$email) {
+    $rows = self::$db->insertRow("INSERT INTO public.autoridad(nombre) VALUES (?)", array ("{$nombre}","{$telefono}","{$email}"));             
+  }
 	}
 
  ?>
