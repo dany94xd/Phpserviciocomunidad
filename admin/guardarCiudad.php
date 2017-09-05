@@ -37,10 +37,11 @@ echo "</nav>";
 
 $id =$_POST['Codigo'];
 $nombre =$_POST['Nombre'];
+$idprovincia=$_POST['idprovincia'];
 
 include_once("CiudadCollector.php");
 $CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->updateCiudad($id,$nombre);
+$CiudadCollectorObj->updateCiudad($id,$nombre,$idprovincia);
 
 echo "<br>";
 echo "<div class='container'>";

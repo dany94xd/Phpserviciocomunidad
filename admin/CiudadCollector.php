@@ -22,8 +22,8 @@ $ObjCiudad= new Ciudad($rows[0]{'idciudad'},$rows[0]{'nombre'},$rows[0]{'idprovi
   return $ObjCiudad;        
 }
 
-function updateCiudad($id,$nombre) {
- $insertrow = self::$db->updateRow("UPDATE public.ciudad SET nombre= ? where idciudad= ? ", array ("{$nombre}",$id));
+function updateCiudad($id,$nombre,$idprovincia) {
+ $insertrow = self::$db->updateRow("UPDATE public.ciudad SET nombre= ?, idprovincia= ? where idciudad= ? ", array ("{$nombre}","{$idprovincia}",$id));
 
 }
 
@@ -31,8 +31,8 @@ function deleteCiudad($id) {
   $deleterow = self::$db->deleteRow("DELETE FROM public.ciudad where idciudad= ? ", array ("{$id}"));
 }
 
-function insertCiudad($nombre) {
-  $rows = self::$db->insertRow("INSERT INTO public.ciudad(nombre) VALUES (?)", array ("{$nombre}"));             
+function insertCiudad($nombre,$idprovincia) {
+  $rows = self::$db->insertRow("INSERT INTO public.ciudad(nombre,idprovincia) VALUES (?,?)", array ("{$nombre}","{$idprovincia}"));             
 }
 
 }

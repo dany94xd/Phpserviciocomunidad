@@ -37,10 +37,11 @@ session_start();
 
 
 $nombre = $_POST['nombre'];
+$idprovincia=$_POST['idprovincia'];
 
 include_once("CiudadCollector.php");
 $CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->insertCiudad($nombre);
+$CiudadCollectorObj->insertCiudad($nombre,$idprovincia);
 
 echo "<br>";
 echo "<div class='container'>";

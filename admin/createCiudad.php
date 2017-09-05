@@ -19,6 +19,8 @@ session_start();
 
 <aside>
 <?php
+include_once("ProvinciaCollector.php"); //llamar el collector de la otra tabla
+$ProvinciaCollectorObj = new ProvinciaCollector(); 
 
  echo "<nav class='navbar navbar-default'>";
  echo "<div class='container-fluid'>";
@@ -40,6 +42,23 @@ session_start();
              echo "<input name='nombre' type='text' id= 'nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
+
+echo "<div class='form-group'>";
+      
+
+echo "<label for='inputName' class='control-label col-xs-2'>Provincia:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<select name='idprovincia'  id= 'idprovincia' class='form-control' required>";
+		echo "<option selected></option>";
+foreach ($ProvinciaCollectorObj->showProvincias() as $c){
+echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>"; 
+}
+
+	     echo "</select> ";
+         echo "</div>";
+     echo "</div>";
+
+
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";            
