@@ -36,7 +36,7 @@ session_start();
  echo "</nav>";
 
 $id=$_GET['id'];
-$no=$_GET['nombre'];
+
 
 include_once("ParroquiaCollector.php");
 $ParroquiaCollectorObj= new ParroquiaCollector();
@@ -46,7 +46,7 @@ echo "<br>";
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Parroquia Eliminada Correctamente</div>";
-echo "<div class='panel-body'>$no</div>";
+echo "<div class='panel-body'>$id</div>";
 echo "</div>";
 echo "</div>";
 ?>

@@ -57,7 +57,7 @@ $ObjParroquia=$ParroquiaCollectorObj->showParroquia($id);
 <div class='form-group'>
       
 
-<label for='inputName' class='control-label col-xs-2'>Provincia:</label>
+<label for='inputName' class='control-label col-xs-2'>Ciudad:</label>
          <div class='col-xs-10'>
              <select name='idciudad'  id= 'idciudad' class='form-control' required>
 		
