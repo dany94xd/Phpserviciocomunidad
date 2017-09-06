@@ -19,7 +19,8 @@ session_start();
 
 <aside>
 <?php
-
+include_once("CiudadCollector.php"); //llamar el collector de la otra tabla
+$CiudadCollectorObj = new CiudadCollector(); 
  echo "<nav class='navbar navbar-default'>";
  echo "<div class='container-fluid'>";
  echo "<div class='navbar-header'><a class='navbar-brand' >Crear Parroquia</a></div>";
@@ -39,13 +40,21 @@ session_start();
      echo "<div class='form-group'>";     
          echo "<label for='inputName' class='control-label col-xs-2'>Parroquia:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name='nombreparroquia' type='text' id= 'nombreparroquia' class='form-control' placeholder='Parroquia'>";
+             echo "<input name='nombre' type='text' id= 'nombre' class='form-control' placeholder='Parroquia'>";
          echo "</div>";
      echo "</div>";
-     echo "<div class='form-group'>";     
-         echo "<label for='inputName' class='control-label col-xs-2'>Ciudad:</label>";
+     echo "<div class='form-group'>";
+      
+
+echo "<label for='inputName' class='control-label col-xs-2'>Ciudad:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name='idciudad' type='text' id= 'idciudad' class='form-control' placeholder='Ciudad'>";
+             echo "<select name='idciudad'  id= 'idciudad' class='form-control' required>";
+		echo "<option selected></option>";
+foreach ($CiudadCollectorObj->showCiudades() as $c){
+echo "<option value='".$c->getIdCiudad()."'>".$c->getNombre()."</option>"; 
+}
+
+	     echo "</select> ";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";

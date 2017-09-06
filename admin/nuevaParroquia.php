@@ -36,18 +36,18 @@ session_start();
  echo "</nav>";
 
 
-$nombreparroquia = $_POST['nombreparroquia'];
+$nombre = $_POST['nombre'];
 $idciudad= $_POST['idciudad'];
 
 include_once("ParroquiaCollector.php");
 $ParroquiaCollectorObj = new ParroquiaCollector();
-$ParroquiaCollectorObj->insertParroquia($nombreparroquia, $idciudad);
+$ParroquiaCollectorObj->insertParroquia($nombre, $idciudad);
 
 echo "<br>";
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "<div class='panel-body'>$nombreparroquia</div>";
+echo "<div class='panel-body'>$nombre</div>";
 echo "</div>";
 echo "</div>";
 ?>
