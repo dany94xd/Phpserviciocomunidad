@@ -15,6 +15,8 @@ class UsuarioCollector extends Collector
     }
     return $arrayUsuario;        
   }
+  
+
 function showUsuario($id) {
     $rows = self::$db->getRows("SELECT * FROM usuario where idusuario= ? ", array ("{$id}"));        
 $ObjUsuario= new Usuario($rows[0]{'idusuario'},$rows[0]{'usuario'},$rows[0]{'contrasenia'},$rows[0]{'tipousuario'});
@@ -32,6 +34,29 @@ function deleteUsuario($id) {
 function insertUsuario($usuario, $contrasenia, $tipousuario) {
     $rows = self::$db->insertRow("INSERT INTO public.usuario(usuario, contrasenia, tipousuario) VALUES (?,?,?)", array ("{$usuario}","{$contrasenia}","{$tipousuario}"));             
   }
+
+//funciones para combobox de denunciantes y autoridades
+
+function showUD() {
+    $rows = self::$db->getRows("SELECT * FROM usuario where tipousuario = 2");        
+    $arrayUsuario= array();        
+    foreach ($rows as $c){
+      $aux = new Usuario($c{'idusuario'},$c{'usuario'},$c{'contrasenia'},$c{'tipousuario'});
+      array_push($arrayUsuario, $aux);
+    }
+    return $arrayUsuario;        
+  }
+  function showUA() {
+    $rows = self::$db->getRows("SELECT * FROM usuario where tipousuario = 3");        
+    $arrayUsuario= array();        
+    foreach ($rows as $c){
+      $aux = new Usuario($c{'idusuario'},$c{'usuario'},$c{'contrasenia'},$c{'tipousuario'});
+      array_push($arrayUsuario, $aux);
+    }
+    return $arrayUsuario;        
+  }
+
+
 
 
 }
