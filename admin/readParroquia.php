@@ -58,8 +58,8 @@ echo "<td>".$c->getNombre()."</td>";
 echo "<td>".$c->getIdCiudad()."</td>";
 
 
-echo "<td><a href='updateParroquia.php?id=".$c->getIdParroquia()."&nombre=".$c->getNombre()."'>Editar</a></td>"; 
-echo "<td><a href='deleteParroquia.php?id=".$c->getIdParroquia()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+echo "<td><a href='updateParroquia.php?id=".$c->getIdParroquia()."'>Editar</a></td>"; 
+echo "<td><a href='deleteParroquia.php?id=".$c->getIdParroquia()."'>Eliminar</a></td>"; 
 echo "</tr>"; 
 }
 
