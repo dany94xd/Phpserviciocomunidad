@@ -34,11 +34,14 @@ echo "</nav>";
 
 $id=$_GET['id'];
 $nombre=$_GET['nombre'];
-
+include_once("ParroquiaCollector.php");
+include_once("Parroquia.php");
+$ParroquiaCollectorObj= new ParroquiaCollector();
+$ObjParroquia=$ParroquiaCollectorObj->showParroquia($id);
 
 ?>
 
-<form method= "POST" class="form-horizontal" action= "guardarParroquia.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "guardarParroquia.php" >
 <div class="form-group">
 <label for="inputName" class="control-label col-xs-2">Código:</label>
 <div class="col-xs-10">
@@ -47,9 +50,32 @@ $nombre=$_GET['nombre'];
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
-           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>">
+           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $ObjParroquia->getNombre();?>">
          </div>
      </div>
+
+<div class='form-group'>
+      
+
+<label for='inputName' class='control-label col-xs-2'>Ciudad:</label>
+         <div class='col-xs-10'>
+             <select name='idciudad'  id= 'idciudad' class='form-control' required>
+		
+<?php
+include_once("CiudadCollector.php"); //llamar el collector de la otra tabla
+$CiudadCollectorObj = new CiudadCollector(); 
+foreach ($CiudadCollectorObj->showCiudades() as $c){
+if($c->getIdCiudad()==$ObjParroquia->getIdCiudad()){
+echo "<option value='".$c->getIdCiudad()."' selected>".$c->getNombre()."</option>";
+}else{
+echo "<option value='".$c->getIdCiudad()."'>".$c->getNombre()."</option>"; 
+}}
+?>
+	     </select>
+         </div>
+     </div>
+
+
      <div class="form-group">
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>

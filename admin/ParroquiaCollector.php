@@ -32,8 +32,8 @@ function deleteParroquia($id) {
 }
 
 
-function insertParroquia($nombre,$id) {
-  $rows = self::$db->insertRow("INSERT INTO public.parroquia(nombre,idciudad) VALUES (?,?)", array ("{$nombre}","{$idciudad}",$id));             
+function insertParroquia($nombre,$idciudad) {
+  $rows = self::$db->insertRow("INSERT INTO public.parroquia(nombre,idciudad) VALUES (?,?)", array ("{$nombre}","{$idciudad}"));             
 }
 
 
