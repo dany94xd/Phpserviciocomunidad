@@ -28,7 +28,7 @@ echo "<nav class='navbar navbar-default'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Autoridad</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='createCargo.php'>Nuevo</a></li>";
+			echo "<li><a href='crearAutoridad.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -40,51 +40,79 @@ echo "<nav class='navbar navbar-default'>";
 
 
 $id=$_GET['id'];
-$nombre=$_GET['nombre'];
+
+include_once("AutoridadCollector.php");
+include_once("Autoridad.php");
+$AutoridadCollectorObj= new AutoridadCollector();
+$ObjAutoridad=$AutoridadCollectorObj->showAutoridad($id);
 
 
-
-echo "Edicion en proceso . . . . </br>";
 
 ?>
 
-<form method= "POST" class="form-horizontal" action= "Guardarautoridad.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "Guardarautoridad.php" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
              <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>" readonly>
+ placeholder="Codigo" value="<?php echo $ObjAutoridad->getIdAutoridad(); ?>" readonly>
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
-             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>">
+             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $ObjAutoridad->getNombre(); ?>">
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Telefono:</label>
          <div class="col-xs-10">
-             <input name = "Telefono" type="text" id= "Telefono" class="form-control" placeholder="Nombre" value="<?php echo $telefono;?>">
+             <input name = "telefono" type="text" id= "telefono" class="form-control" placeholder="Telefono" value="<?php echo $ObjAutoridad->getTelefono(); ?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Nombre:</label>
+         <label for="inputName" class="control-label col-xs-2">E-mail:</label>
          <div class="col-xs-10">
-             <input name = "Email" type="text" id= "Email" class="form-control" placeholder="Nombre" value="<?php echo $email;?>">
+             <input name = "email" type="text" id= "email" class="form-control" placeholder="E-mail" value="<?php echo $ObjAutoridad->getEmail(); ?>">
          </div>
      </div>
-     <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Nombre:</label>
-         <div class="col-xs-10">
-             <input name = "ID Tipo de Autoridad" type="text" id= "TipoAutoridad" class="form-control" placeholder="Nombre" value="<?php echo $id_tipoAutoridad;?>">
-         </div>
+<div class="form-group">
+<label for='inputName' class='control-label col-xs-2'>Tipo de Autoridad:</label>
+        <div class='col-xs-10'>
+             <select name='id_tipoautoridad'  id= 'id_tipoautoridad' class='form-control' required>
+		
+<?php
+	include_once("TipoAutoridadCollector.php");
+	$TipoAutoridadCollectorObj = new TipoAutoridadCollector(); 
+	foreach ($TipoAutoridadCollectorObj->showTiposAutoridades() as $c){
+	   if($c->getIdTipoAutoridad()==$ObjAutoridad->getIdTipoAutoridad()){
+		echo "<option value='".$c->getIdTipoAutoridad()."'selected>".$c->getNombre()."</option>"; 
+	   }else{
+		echo "<option value='".$c->getIdTipoAutoridad()."'>".$c->getNombre()."</option>"; 
+	   }}
+?>
+	     </select>
+        </div>
      </div>
+
+
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Nombre:</label>
-         <div class="col-xs-10">
-             <input name = "ID Tipo de Usuario" type="text" id= "TipoUsuario" class="form-control" placeholder="Nombre" value="<?php echo $id_tipousuario;?>">
-         </div>
+<label for='inputName' class='control-label col-xs-2'>Usuario:</label>
+        <div class='col-xs-10'>
+             <select name='id_usuario'  id= 'id_usuario' class='form-control' required>
+		
+<?php
+	include_once("UsuarioCollector.php");
+	$UsuarioCollectorObj = new UsuarioCollector(); 
+	foreach ($UsuarioCollectorObj->showUA() as $c){
+	   if($c->getIdUsuario()==$ObjAutoridad->getIdUsuario()){
+		echo "<option value='".$c->getIdUsuario()."'selected>".$c->getUsuario()."</option>"; 
+	   }else{
+		echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
+	   }}
+?>
+	     </select>
+        </div>
      </div>
      <div class="form-group">
          <div class="col-xs-offset-2 col-xs-10">

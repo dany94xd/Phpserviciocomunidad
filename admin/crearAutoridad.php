@@ -24,7 +24,10 @@ session_start();
 </section>
 <aside>
 <?php
-
+include_once("TipoAutoridadCollector.php");
+	$TipoAutoridadCollectorObj = new TipoAutoridadCollector();
+include_once("UsuarioCollector.php");
+	$UsuarioCollectorObj = new UsuarioCollector(); 
  echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Autoridad</a></div>";
@@ -34,7 +37,7 @@ session_start();
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
-    echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
+    echo "<li><a href='salir.php'><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
     echo "</ul>";
     echo "</div>";
     echo "</nav>";
@@ -59,7 +62,33 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevaAutoridad.php' 
              echo "<input name = 'email' type='text' id= 'email' class='form-control' placeholder='Email'>";
          echo "</div>";
         echo "</div>";
-     echo "<div class='form-group'>";
+ echo "<div class='form-group'>";
+echo "<label for='inputName' class='control-label col-xs-2'>Tipo de Autoridad:</label>";
+        echo "<div class='col-xs-10'>";
+             echo "<select name='id_tipoautoridad'  id= 'id_tipoautoridad' class='form-control' required>";
+echo "<option selected></option>";
+	foreach ($TipoAutoridadCollectorObj->showTiposAutoridades() as $c){
+	echo "<option value='".$c->getIdTipoAutoridad()."'>".$c->getNombre()."</option>"; 
+	   }
+
+	echo "</select>";
+        echo "</div>";
+     echo "</div>";
+
+
+   echo "<div class='form-group'>";
+echo "<label for='inputName' class='control-label col-xs-2'>Usuario:</label>";
+        echo "<div class='col-xs-10'>";
+        echo "<select name='id_usuario'  id= 'id_usuario' class='form-control' required>";
+	echo "<option selected></option>";	
+	foreach ($UsuarioCollectorObj->showUA() as $c){
+	  echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
+	   }
+	echo "</select>";
+        echo "</div>";
+     echo "</div>";
+
+echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
          echo "</div>";
