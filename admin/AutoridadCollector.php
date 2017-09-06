@@ -18,13 +18,13 @@
 		}
 
 		function showAutoridad($id){
-			$rows = self::$db->getRows("SELECT * FROM autoridad WHERE id_autoridad = ?", array("{$id}"));
-			$ObjAutoridad = new Autoridad($rows[0]{'id_autoridad'},$rows[0]{'nombre'},$rows[0]{'telefono'},$rows[0]{'email'},$rows[0]{'id_tipo_autoridad'},$rows[0]{'id_usuario'});
+			$rows = self::$db->getRows("SELECT * FROM autoridad WHERE idautoridad = ?", array("{$id}"));
+			$ObjAutoridad = new Autoridad($rows[0]{'idautoridad'},$rows[0]{'nombre'},$rows[0]{'telefono'},$rows[0]{'email'},$rows[0]{'id_tipoautoridad'},$rows[0]{'id_usuario'});
 			return $ObjAutoridad;
 		}
 
-		function updateAutoridad($id_autoridad,$nombre,$telefono,$email,$id_tipo_autoridad,$id_usuario){
-			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ?, id_tipoautoridad = ?, id_usuario = ? WHERE id_autoridad = ?", array ("{$nombre},{$telefono},{$email},{$id_tipoautoridad},{$id_usuario}",$id_autoridad));
+		function updateAutoridad($id,$nombre,$telefono,$email,$id_tipoautoridad,$id_usuario){
+			$insertRow = self::$db->updateRow("UPDATE public.autoridad SET nombre = ? , telefono = ? , email = ?, id_tipoautoridad = ?, id_usuario = ? WHERE idautoridad = ?", array ("{$nombre}","{$telefono}","{$email}","{$id_tipoautoridad}","{$id_usuario}",$id));
 
 		}
 
@@ -32,8 +32,8 @@
 			$deleteRow = self::$db->deleteRow("DELETE FROM public.autoridad WHERE id_autoridad = ?" , array ("{$id}"));
 		}
 
-		function insertAutoridad($nombre,$telefono,$email) {
-    $rows = self::$db->insertRow("INSERT INTO public.autoridad(nombre) VALUES (?)", array ("{$nombre}","{$telefono}","{$email}"));             
+		function insertAutoridad($nombre,$telefono,$email,$id_tipoautoridad,$id_usuario) {
+    $rows = self::$db->insertRow("INSERT INTO public.autoridad (nombre, telefono, email, id_tipoautoridad, id_usuario) VALUES (?,?,?,?,?)", array ("{$nombre}","{$telefono}","{$email}","{$id_tipoautoridad}","{$id_usuario}"));             
   }
 	}
 

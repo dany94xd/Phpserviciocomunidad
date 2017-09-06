@@ -68,8 +68,8 @@ echo "<td>".$c->getEmail()."</td>";
 echo "<td>".$c->getIdTipoAutoridad()."</td>"; 
 echo "<td>".$c->getIdUsuario()."</td>";
 
-    echo "<td><a href='updateCategoria.php?id=".$c->getIdAutoridad()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCategoria.php?id=".$c->getIdAutoridad()."'>Eliminar</a></td>"; 
+    echo "<td><a href='updateAutoridad.php?id=".$c->getIdAutoridad()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteAutoridad.php?id=".$c->getIdAutoridad()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 
 	echo "</tr>"; 

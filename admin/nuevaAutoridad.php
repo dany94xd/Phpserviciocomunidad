@@ -40,11 +40,15 @@ session_start();
     echo "</nav>";
 
 
-$nombre = $_POST['nombre','telefono','email'];
+$nombre =$_POST['nombre'];
+$telefono =$_POST['telefono'];
+$email =$_POST['email'];
+$id_tipoautoridad =$_POST['id_tipoautoridad'];
+$id_usuario =$_POST['id_usuario'];
 
 include_once("AutoridadCollector.php");
 $AutoridadCollectorObj = new AutoridadCollector();
-$AutoridadCollectorObj->insertAutoridad($nombre,$telefono,$email);
+$AutoridadCollectorObj->insertAutoridad($nombre,$telefono,$email,$id_tipoautoridad,$id_usuario);
 
 echo "<br>";
 
@@ -53,8 +57,8 @@ echo "  <h2>Autoridad</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
 echo "    <div class='panel-body'>$nombre</div>";
-echo "    <div class='panel-body'>$telefono</div>";
-echo "    <div class='panel-body'>$email</div>";
+echo "    <div class='panel-body'><a href='readAutoridad.php'>Regresar</a></div>";
+echo "    
 echo "  </div>";
 echo "</div>";
 ?>
