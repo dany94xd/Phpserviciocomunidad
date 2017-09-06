@@ -18,12 +18,12 @@ function showParroquias() {
 
 function showParroquia($id) {
 $rows = self::$db->getRows("SELECT * FROM parroquia where idparroquia= ? ", array ("{$id}"));        
-$ObjParroquia= new Parroquia($rows[0]{'idparroquia'},$rows[0]{'nombre'});
+$ObjParroquia= new Parroquia($rows[0]{'idparroquia'},$rows[0]{'nombre'},$rows[0]{'idciudad'});
   return $ObjParroquia;        
 }
 
-function updateParroquia($id,$nombre) {
- $insertrow = self::$db->updateRow("UPDATE public.parroquia SET nombre= ? where idparroquia= ? ", array ("{$nombre}",$id));
+function updateParroquia($id,$nombre,$idciudad) {
+ $insertrow = self::$db->updateRow("UPDATE public.parroquia SET nombre= ?, idciudad= ? where idparroquia= ? ", array ("{$nombre}","{$idciudad}",$id));
 
 }
 
@@ -33,7 +33,7 @@ function deleteParroquia($id) {
 
 
 function insertParroquia($nombre,$id) {
-  $rows = self::$db->insertRow("INSERT INTO public.parroquia(nombre,idciudad) VALUES (?,?)", array ("{$nombre}",$id));             
+  $rows = self::$db->insertRow("INSERT INTO public.parroquia(nombre,idciudad) VALUES (?,?)", array ("{$nombre}","{$idciudad}",$id));             
 }
 
 
