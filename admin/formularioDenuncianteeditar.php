@@ -47,7 +47,7 @@ $DenuncianteCollectorObj= new DenuncianteCollector();
 $ObjDenunciante=$DenuncianteCollectorObj->showDenunciante($id);
 
 
-echo "Edicion en proceso . . . . </br></br>";
+
 
 ?>
 
@@ -78,7 +78,7 @@ echo "Edicion en proceso . . . . </br></br>";
              <input name = "email" type="text" id= "email" class="form-control" placeholder="email" value="<?php echo $ObjDenunciante->getEmail(); ?>"/>
          </div>
      </div>
-
+<div class="form-group">
 <label for='inputName' class='control-label col-xs-2'>Usuario:</label>
         <div class='col-xs-10'>
              <select name='tipousuario'  id= 'tipousuario' class='form-control' required>
