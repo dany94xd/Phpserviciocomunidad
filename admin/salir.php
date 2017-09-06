@@ -4,29 +4,48 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="es">
+<img src="">
 	<head>
 		<meta charset ="utf-8">
-		<title> PSW + Cookie pagina +NOMBRE</title>
+		<title>Cierre de sesion</title>
 	</head>
+	<style type="text/css">
+	*{
+		margin: 0 auto;
+		text-align: center;
+		font-family: Roboto, sans-serif;
+	}
+		a{
+			padding: 25px;
+			background-color: #0099FF;
+			text-decoration: none;
+			color: white;
+		}
+		div{
+			padding: 25px;
+			margin: 25px;
+			
+		}
+	</style>
 <body>
-<header>
-<nav>
-<a href="inicio.html">Inicio</a>
-<a href="inicio.html">Nosotros</a>
-<a href="inicio.html">Servicios</a>
-<a href="inicio.html">Contactenos</a>
-</nav>
-</header>
+
 <section>
 </section>
 <section id="main">
 <?php
 if (isset($_SESSION['MiSession'])) {
 session_destroy();
-echo "se ha destruido session exitosamente<br/>";
+
+echo "<img src='../images/cierredeSesion.jpg'>";
+echo "<div>";
+echo "Se ha destruido sesion exitosamente<br/>";
+echo "</div>";
 echo "<a href='index.php'>Volver</a>";
 }else{
+	echo "<div>";
 echo "ERROR... <br/>";
+echo "</div>";
+
 echo "<a href='index.php'>Volver</a>";
 }
 
