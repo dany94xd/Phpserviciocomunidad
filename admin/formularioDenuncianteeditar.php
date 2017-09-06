@@ -78,12 +78,25 @@ echo "Edicion en proceso . . . . </br></br>";
              <input name = "email" type="text" id= "email" class="form-control" placeholder="email" value="<?php echo $ObjDenunciante->getEmail(); ?>"/>
          </div>
      </div>
-<div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Usuario:</label>
-         <div class="col-xs-10">
-             <input name = "id_usuario" type="text" id= "id_usuario" class="form-control" placeholder="id usuario" value="<?php echo $ObjDenunciante->getIdUsuario(); ?>"/>
-         </div>
+
+<label for='inputName' class='control-label col-xs-2'>Usuario:</label>
+        <div class='col-xs-10'>
+             <select name='tipousuario'  id= 'tipousuario' class='form-control' required>
+		
+<?php
+	include_once("UsuarioCollector.php");
+	$UsuarioCollectorObj = new UsuarioCollector(); 
+	foreach ($UsuarioCollectorObj->showUD() as $c){
+	   if($c->getIdUsuario()==$ObjDenunciante->getIdUsuario()){
+		echo "<option value='".$c->getIdUsuario()."'selected>".$c->getUsuario()."</option>"; 
+	   }else{
+		echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
+	   }}
+?>
+	     </select>
+        </div>
      </div>
+
       
      <div class="form-group">
          <div class="col-xs-offset-2 col-xs-10">
