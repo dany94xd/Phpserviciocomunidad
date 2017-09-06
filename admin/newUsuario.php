@@ -56,13 +56,25 @@ session_start();
  placeholder="Contraseña"  />
          </div>
      </div>
-     <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Tipo de Usuario:</label>
-         <div class="col-xs-10">
-             <input name = "tipousuario" type="text" id= "tipousuario" class="form-control" placeholder="Tipo usuario"/>
-         </div>
-     </div>
+     
+<div class='form-group'>
       
+
+<label for='inputName' class='control-label col-xs-2'>Tipo de Usuario:</label>
+        <div class='col-xs-10'>
+             <select name='tipousuario'  id= 'tipousuario' class='form-control' required>
+		<option selected></option>
+<?php
+include_once("TipoUsuarioCollector.php");
+$TipoUsuarioCollectorObj = new TipoUsuarioCollector(); 
+foreach ($TipoUsuarioCollectorObj->showTipoUsuarios() as $c){
+echo "<option value='".$c->getIdTipoUsuario()."'>".$c->getTipo()."</option>"; 
+}
+?>
+	     </select>
+        </div>
+     </div>
+
      <div class="form-group">
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
