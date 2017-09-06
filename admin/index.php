@@ -37,20 +37,22 @@ border: none;
 </header>
 
 <aside>
-<!-- <?php
+<?php
 if (isset($_SESSION['MiSession'])) {
 echo "<p>Hola:(".$_SESSION['MiSession'].") [<a href='salir.php'>Salir</a>]</p>";
 
-$id =1;
 
 }
 else {
-?> -->
+
+session_destroy();
+}
+?>
 
 <h1>Iniciar Sesión</h1>
 <div><img src="../images/usuario.png"></div>
 
-<form id="contact-form" action="login.php" method= "post">
+<form id="contact-form" action="verificarusuario.php" method= "post">
 <div style="height: 20px;"></div>
 <div class="text-fieldsl">
 <div class="float-input">
@@ -58,14 +60,13 @@ else {
 <span><i class="fa fa-user"></i></span>
 </div>
 <div class="float-input">
-<input name="clave" id="clave" type="password" placeholder="Contraseña:">
+<input name="contrasenia" id="contrasenia" type="password" placeholder="Contraseña:">
 <span><i class="fa fa-lock"></i></span>
 </div>
 <input type="submit" id="submit_contact" class="main-button" value="Login">
                                                           
 </div>
 </form>
-<?php } ?>
 </aside>
 
 

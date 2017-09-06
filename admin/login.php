@@ -27,18 +27,35 @@ session_start();
   
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <?php
-$_SESSION['MiSession']= $_POST['usuario'];
-$nombre= $_POST['usuario'];
-$password= $_POST['clave'];
 
-echo "<li><a href='#''><span class='glyphicon glyphicon-user'></span> $nombre</a></li>";
+<?php
+
+//$_SESSION['MiSession']= $_POST['usuario'];
+// $nombre= $_POST['usuario'];
+// $password= $_POST['contrasenia'];
+
+if (isset($_SESSION['MiSession'])) {
+echo "<li><a href='#'>Hola: (" . $_SESSION ['MiSession'] . ")</a></li>";
+$usuario=$_SESSION['MiSession'];
+echo "<li><a href='#'><span class='glyphicon glyphicon-user'></span> $usuario</a></li>";
 echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
+}else{
+echo '<script>window.location.href = "index.php";</script>';
+ 
+}
+
 ?>
+
+
+
+
+
+
       
     </ul>
   </div>
 </nav>
+
 
 
 
