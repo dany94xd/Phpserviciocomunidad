@@ -52,7 +52,7 @@ class Autoridad
 	function getIdTipoAutoridad(){
 		return $this->id_tipoautoridad;
 	}
-	function getIdUsario(){
+	function getIdUsuario(){
 		return $this->id_usuario;
 	}
 }

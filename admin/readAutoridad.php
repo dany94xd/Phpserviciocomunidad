@@ -30,7 +30,7 @@ session_start();
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='crearcategoria.php'>Nuevo</a></li>";
+			echo "<li><a href='crearAutoridad.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -43,13 +43,17 @@ include_once("AutoridadCollector.php");
 $AutoridadCollectorObj = new AutoridadCollector();
 
 echo "<div class='container'>";
-echo "<h2>Categorias</h2>";
+echo "<h2>Autoridad</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
 echo "     <th>Nombre</th>";  
+echo " 	   <th>Telefono</th>"; 
+echo "     <th>E-mail</th>"; 
+echo " 	   <th>Tipo de Autoridad</th>"; 
+echo "     <th>Usuario</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
 
@@ -59,9 +63,15 @@ echo "<tbody>";
 echo "<tr>"; 
 echo "<td>".$c->getIdAutoridad()."</td>"; 
 echo "<td>".$c->getNombre()."</td>";
+echo "<td>".$c->getTelefono()."</td>"; 
+echo "<td>".$c->getEmail()."</td>";
+echo "<td>".$c->getIdTipoAutoridad()."</td>"; 
+echo "<td>".$c->getIdUsuario()."</td>";
 
-    echo "<td><a href='updateCategoria.php?id=".$c->getIdAutoridad()."&nombre=".$c->getNombre()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCategoria.php?id=".$c->getIdAutoridad()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+    echo "<td><a href='updateCategoria.php?id=".$c->getIdAutoridad()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteCategoria.php?id=".$c->getIdAutoridad()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+
 	echo "</tr>"; 
 
 
