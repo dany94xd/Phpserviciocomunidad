@@ -33,17 +33,22 @@ session_start();
 </style></head>
 <body>
 
+
 <?php
 
-    echo "<nav class='navbar navbar-default'>";
+    echo "<nav class='navbar navbar-inverse'>";
     echo "<div class='container-fluid'>";
-    echo "<div class='navbar-header'><a class='navbar-brand'>Tu voz Ciudadana</a></div>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tu voz Ciudadana</a></div>";
     echo " <ul class='nav navbar-nav navbar-right'>";
-    echo "<li><a href='#'>Hola:(" . $_SESSION ['MiSession'] . ")</a></li>";
+    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
+    //echo "<li><a href='#''><span class='glyphicon glyphicon-user'></span> $usuario</a></li>";
     echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
     echo "</ul>";
     echo "</div>";
-    echo "</nav>";  
+    echo "</nav>";
+
+   
+
     echo"<div id='tabla'>";   
     echo "<div id='contenedor'>";
     echo "<div id='contenidos'>";
