@@ -27,11 +27,10 @@ session_start();
 
  echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
-    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
-      echo "<li><a href='readUsuario.php'>Consulta</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -40,27 +39,46 @@ session_start();
     echo "</div>";
     echo "</nav>";
 
-
-$usuario=$_POST["usuario"];
-$contrasenia=$_POST["contrasenia"];
-$tipousuario=$_POST["tipousuario"];
-
 include_once("UsuarioCollector.php");
-$UsuarioCollectorObj= new UsuarioCollector();
-$UsuarioCollectorObj->insertUsuario($usuario, $contrasenia, $tipousuario);
-
-echo "<br>";
+$UsuarioCollectorObj = new UsuarioCollector();
 
 echo "<div class='container'>";
-echo "  <h2>Usuario</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$usuario</div>";
-echo "  </div>";
+echo "<h2>Usuario</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Usuario</th>"; 
+echo " 	   <th>Contraseña</th>"; 
+echo "     <th>Tipo de Usuario</th>";  
+echo "</tr>"; 
+echo "</thead>"; 
+
+foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdUsuario()."</td>"; 
+echo "<td>".$c->getUsuario()."</td>";
+echo "<td>".$c->getContrasenia()."</td>"; 
+echo "<td>".$c->getTipoUsuario()."</td>";
+
+    echo "<td><a href='formularioUsuarioeditar.php?id=".$c->getIdUsuario()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteUsuario.php?id=".$c->getIdUsuario()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+
+
+}
+echo "</tbody>";
+echo "</table>";
 echo "</div>";
+echo "</div>";
+
 ?>
-
-
 </aside>
 </body>
 </html>
+
+
+

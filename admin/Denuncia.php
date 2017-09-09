@@ -14,9 +14,10 @@ class Denuncia
     private $id_parroquia;
     private $idciudad;
     private $id_estado_denuncia;
-    private $foto;
+    private $id_autoridad;
+    private $imagen;
     
-     function __construct($id_denuncia, $titulo, $descripcion, $fecha_publicacion,$fecha_ejecucion, $id_denunciante, $idciudad, $idparroquia,$id_categoria,$id_estado_denuncia) {
+     function __construct($id_denuncia, $titulo, $descripcion, $fecha_publicacion,$fecha_ejecucion, $id_denunciante, $idciudad, $idparroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen) {
        $this->id_denuncia = $id_denuncia;
        $this->titulo = $titulo;
        $this->descripcion = $descripcion;
@@ -27,6 +28,8 @@ class Denuncia
        $this->idparroquia=$idparroquia;
        $this->id_categoria=$id_categoria;
        $this->id_estado_denuncia=$id_estado_denuncia;
+       $this->id_autoridad=$id_autoridad;
+       $this->imagen=$imagen;
 
      }
     
@@ -92,6 +95,19 @@ class Denuncia
      function getIdEstadoDenuncia(){
        return $this->id_estado_denuncia;
      } 
+      function setIdAutoridad($id_autoridad){
+       $this->id_autoridad = $id_autoridad;
+     } 
+     function getIdAutoridad(){
+       return $this->id_autoridad;
+     } 
+
+      function setImagen($imagen){
+       $this->imagen= $imagen;
+     } 
+     function getImagen(){
+       return $this->imagen;
+     }
 }
 
 ?> 

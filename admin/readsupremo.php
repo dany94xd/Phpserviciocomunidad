@@ -9,10 +9,9 @@ session_start();
 <title>Readsupremo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
-
 <style type="text/css">
 #contenedor {
     display: table;
@@ -30,13 +29,15 @@ session_start();
     vertical-align: middle;
     padding: 10px;
 }
-</style></head>
-<body>
+</style>
 
+
+</head>
+<body>
 
 <?php
 
-    echo "<nav class='navbar navbar-inverse'>";
+   echo "<nav class='navbar navbar-inverse'>";
     echo "<div class='container-fluid'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tu voz Ciudadana</a></div>";
     echo " <ul class='nav navbar-nav navbar-right'>";
@@ -47,30 +48,43 @@ session_start();
     echo "</div>";
     echo "</nav>";
 
+ 
+    echo "<div class='imagenMain'>";
+    echo "<img src=\"../images/service.svg\">"; 
+    echo "<h1>Tu voz ciudadana</h1>";
+    echo "</div>";
    
-
-    echo"<div id='tabla'>";   
     echo "<div id='contenedor'>";
-    echo "<div id='contenidos'>";
-    echo "<div id='columna1'><a href='readUsuario.php'>Usuario</a></div>";
-    echo "<div id='columna2'><a href='readTipoUsuario.php'>TipoUsuario</div>";
-    echo "<div id='columna3'><a href='readAutoridad.php'>Autoridad</div>";
-    echo "<div id='columna4'><a href='readTipoAutoridad.php'>Tipo de Autoridad</div>";
+
+    echo "<div id='contenidos espacio'>";
+    echo "<div id='columna'><img src=\"../images/user1.png\"><a href='Usuario/readUsuario.php'>Usuario</a></div>";   
+    echo "<div id='columna'><img src=\"../images/user3.png\"><a href='TipoUsuario/readTipoUsuario.php'>TipoUsuario</a></div>";
+    echo "<div id='columna'><img src=\"../images/poli2.png\"><a href='Autoridad/readAutoridad.php'>Autoridad</a></div>";
+    echo "<div id='columna'><img src=\"../images/tipoAuto.png\"><a href='TipoAutoridad/readTipoAutoridad.php'>Tipo de Autoridad</a></div>";
     echo "</div>";
-    echo "<div id='contenidos'>";
-    echo "<div id='columna1'><a href='readCategoria.php'>Categorias</div>";
-    echo "<div id='columna2'><a href='readDenuncia.php'>Denuncia</div>";
-    echo "<div id='columna3'><a href='readComentario.php'>Comentario</div>";
-    echo "<div id='columna4'><a href='readDenunciante.php'>Denunciante</div>";
+
+    echo "<div id='contenidos espacio'>";
+    echo "<div id='columna'><img src=\"../images/servicio.png\"><a href='readCategoria.php'>Categorias</a></div>";
+    echo "<div id='columna'><img src=\"../images/denuncia.png\"><a href='readDenuncia.php'>Denuncia</a></div>";
+    echo "<div id='columna'><img src=\"../images/comentario.png\"><a href='readComentario.php'>Comentario</a></div>";
+    echo "<div id='columna'><img src=\"../images/denunciantes.png\"><a href='readDenunciante.php'>Denunciante</a></div>";
     echo "</div>";
-    echo "<div id='contenidos'>";
-    echo "<div id='columna1'><a href='readProvincia.php'>Provincia</div>";
-    echo "<div id='columna2'><a href='readCiudad.php'>Ciudad</div>";
-    echo "<div id='columna3'><a href='readParroquia.php'>Parroquia</div>";
-    echo "<div id='columna3'><a href='readEstadoDenuncia.php'>Estado de denuncia</div>";
+
+    echo "<div id='contenidos espacio'>";
+    echo "<div id='columna'><img src=\"../images/provincia.png\"><a href='readProvincia.php'>Provincia</a></div>";
+    echo "<div id='columna'><img src=\"../images/ciudad.png\"><a href='readCiudad.php'>Ciudad</a></div>";
+    echo "<div id='columna'><img src=\"../images/parroquia.png\"><a href='readParroquia.php'>Parroquia</a></div>";
+    echo "<div id='columna'><img src=\"../images/estadoDenu.png\"><a href='readEstadoDenuncia.php'>Estado de denuncia</a></div>";
     echo "</div>";
+
     echo "</div>";
-    echo "</div>";
+
+ 
+  
+//<img src='../images/user.svg'>
+  
+  
+
 
 
 ?>

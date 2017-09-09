@@ -6,14 +6,14 @@ class Denunciante
     private $nombre;
     private $apellido;
     private $email;
-    private $id_usuario;
+    private $idusuario;
     
-     function __construct($id_denunciante, $nombre, $apellido, $email, $id_usuario) {
+     function __construct($id_denunciante, $nombre, $apellido, $email, $idusuario) {
        $this->id_denunciante = $id_denunciante;
        $this->nombre = $nombre;
        $this->apellido = $apellido;
        $this->email = $email;
-       $this->id_usuario = $id_usuario;
+       $this->idusuario = $idusuario;
      }
     
      function setIdDenunciante($id_denunciante){
@@ -41,11 +41,11 @@ class Denunciante
      function getEmail(){
        return $this->email;
      } 
-     function setIdUsuario($id_usuario){
-       $this->id_usuario = $id_usuario;
+     function setIdUsuario($idusuario){
+       $this->idusuario = $idusuario;
      } 
      function getIdUsuario(){
-       return $this->id_usuario;
+       return $this->idusuario;
      } 
 }
 

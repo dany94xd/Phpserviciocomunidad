@@ -33,7 +33,7 @@ echo "</div>";
 echo "</nav>";
 
 $id=$_GET['id'];
-$nombre=$_GET['nombre'];
+// $nombre=$_GET['nombre'];
 include_once("ParroquiaCollector.php");
 include_once("Parroquia.php");
 $ParroquiaCollectorObj= new ParroquiaCollector();

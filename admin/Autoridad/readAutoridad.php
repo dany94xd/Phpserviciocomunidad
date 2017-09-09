@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Tabla Usuario </title>
+		<title> Tabla Autoridad </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,8 +30,7 @@ session_start();
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
-      echo "<li><a href='readUsuario.php'>Consulta</a></li>";
+			echo "<li><a href='crearAutoridad.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -40,27 +39,49 @@ session_start();
     echo "</div>";
     echo "</nav>";
 
-
-$usuario=$_POST["usuario"];
-$contrasenia=$_POST["contrasenia"];
-$tipousuario=$_POST["tipousuario"];
-
-include_once("UsuarioCollector.php");
-$UsuarioCollectorObj= new UsuarioCollector();
-$UsuarioCollectorObj->insertUsuario($usuario, $contrasenia, $tipousuario);
-
-echo "<br>";
+include_once("AutoridadCollector.php");
+$AutoridadCollectorObj = new AutoridadCollector();
 
 echo "<div class='container'>";
-echo "  <h2>Usuario</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$usuario</div>";
-echo "  </div>";
+echo "<h2>Autoridad</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Nombre</th>";  
+echo " 	   <th>Telefono</th>"; 
+echo "     <th>E-mail</th>"; 
+echo " 	   <th>Tipo de Autoridad</th>"; 
+echo "     <th>Usuario</th>"; 
+echo "</tr>"; 
+echo "</thead>"; 
+
+foreach ($AutoridadCollectorObj -> showAutoridades() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdAutoridad()."</td>"; 
+echo "<td>".$c->getNombre()."</td>";
+echo "<td>".$c->getTelefono()."</td>"; 
+echo "<td>".$c->getEmail()."</td>";
+echo "<td>".$c->getIdTipoAutoridad()."</td>"; 
+echo "<td>".$c->getIdUsuario()."</td>";
+
+    echo "<td><a href='updateAutoridad.php?id=".$c->getIdAutoridad()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteAutoridad.php?id=".$c->getIdAutoridad()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+
+	echo "</tr>"; 
+
+
+}
+echo "</tbody>";
+echo "</table>";
 echo "</div>";
+echo "</div>";
+
 ?>
-
-
 </aside>
 </body>
 </html>

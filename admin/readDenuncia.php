@@ -57,12 +57,15 @@ echo "     <th>Denunciante</th>";
 echo "     <th>Ciudad</th>"; 
 echo "     <th>Parroquia</th>"; 
 echo "     <th>Categoria</th>";  
-echo "     <th>Estado</th>";   
+echo "     <th>Estado</th>"; 
+echo "     <th>Autoridad</th>";
+echo "     <th>Imagen</th>";  
 echo "</tr>"; 
 echo "</thead>"; 
 
 foreach ($DenunciaCollectorObj->showDenuncias() as $c){
 
+$img = $c->getImagen();
 echo "<tbody>"; 
 echo "<tr>"; 
 echo "<td>".$c->getIdDenuncia()."</td>"; 
@@ -75,9 +78,11 @@ echo "<td>".$c->getIdCiudad()."</td>";
 echo "<td>".$c->getIdParroquia()."</td>";
 echo "<td>".$c->getIdCategoria()."</td>";
 echo "<td>".$c->getIdEstadoDenuncia()."</td>";
+echo "<td>".$c->getIdAutoridad()."</td>";
+echo "<td>" . "<img src='../perfil/$img' width='50' height='50' />" . "</td>";
 
-    echo "<td><a href='formularioDenuncianteeditar.php?id=".$c->getIdDenuncia()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteDenunciante.php?id=".$c->getIdDenuncia()."'>Eliminar</a></td>"; 
+    echo "<td><a href='FormularioDenunciaEditar.php?id=".$c->getIdDenuncia()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteDenuncia.php?id=".$c->getIdDenuncia()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 
 

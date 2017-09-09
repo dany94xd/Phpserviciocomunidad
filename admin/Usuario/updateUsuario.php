@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Tabla Usuario </title>
+		<title> Usuario Actualizado </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@ session_start();
 
  echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
-    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
@@ -41,26 +41,31 @@ session_start();
     echo "</nav>";
 
 
+$idusuario=$_POST["idusuario"];
 $usuario=$_POST["usuario"];
 $contrasenia=$_POST["contrasenia"];
 $tipousuario=$_POST["tipousuario"];
 
 include_once("UsuarioCollector.php");
 $UsuarioCollectorObj= new UsuarioCollector();
-$UsuarioCollectorObj->insertUsuario($usuario, $contrasenia, $tipousuario);
+$UsuarioCollectorObj->updateUsuario($idusuario,$usuario, $contrasenia, $tipousuario);
+
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Usuario</h2>";
+echo "  <h2>Cargos</h2>";
 echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
+echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$usuario</div>";
 echo "  </div>";
 echo "</div>";
+ 
+
+
 ?>
-
-
 </aside>
 </body>
 </html>
+
+
