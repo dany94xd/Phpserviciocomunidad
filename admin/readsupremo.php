@@ -64,17 +64,17 @@ session_start();
     echo "</div>";
 
     echo "<div id='contenidos espacio'>";
-    echo "<div id='columna'><img src=\"../images/servicio.png\"><a href='readCategoria.php'>Categorias</a></div>";
-    echo "<div id='columna'><img src=\"../images/denuncia.png\"><a href='readDenuncia.php'>Denuncia</a></div>";
-    echo "<div id='columna'><img src=\"../images/comentario.png\"><a href='readComentario.php'>Comentario</a></div>";
-    echo "<div id='columna'><img src=\"../images/denunciantes.png\"><a href='readDenunciante.php'>Denunciante</a></div>";
+    echo "<div id='columna'><img src=\"../images/servicio.png\"><a href='Categoria/readCategoria.php'>Categorias</a></div>";
+    echo "<div id='columna'><img src=\"../images/denuncia.png\"><a href='Denuncia/readDenuncia.php'>Denuncia</a></div>";
+    echo "<div id='columna'><img src=\"../images/comentario.png\"><a href='Comentario/readComentario.php'>Comentario</a></div>";
+    echo "<div id='columna'><img src=\"../images/denunciantes.png\"><a href='Denunciante/readDenunciante.php'>Denunciante</a></div>";
     echo "</div>";
 
     echo "<div id='contenidos espacio'>";
-    echo "<div id='columna'><img src=\"../images/provincia.png\"><a href='readProvincia.php'>Provincia</a></div>";
-    echo "<div id='columna'><img src=\"../images/ciudad.png\"><a href='readCiudad.php'>Ciudad</a></div>";
-    echo "<div id='columna'><img src=\"../images/parroquia.png\"><a href='readParroquia.php'>Parroquia</a></div>";
-    echo "<div id='columna'><img src=\"../images/estadoDenu.png\"><a href='readEstadoDenuncia.php'>Estado de denuncia</a></div>";
+    echo "<div id='columna'><img src=\"../images/provincia.png\"><a href='Provincia/readProvincia.php'>Provincia</a></div>";
+    echo "<div id='columna'><img src=\"../images/ciudad.png\"><a href='Ciudad/readCiudad.php'>Ciudad</a></div>";
+    echo "<div id='columna'><img src=\"../images/parroquia.png\"><a href='Parroquia/readParroquia.php'>Parroquia</a></div>";
+    echo "<div id='columna'><img src=\"../images/estadoDenu.png\"><a href='EstadoDenuncia/readEstadoDenuncia.php'>Estado de denuncia</a></div>";
     echo "</div>";
 
     echo "</div>";
