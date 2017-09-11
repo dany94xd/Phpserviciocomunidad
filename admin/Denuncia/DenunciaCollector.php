@@ -21,16 +21,16 @@ $ObjDenuncia= new Denuncia($rows[0]{'id_denuncia'},$rows[0]{'titulo'},$rows[0]{'
     
     return $ObjDenuncia;        
   }
-function updateDenuncia($id,$titulo, $descripcion, $fecha_publicacion, $fecha_ejecucion,$id_denunciante,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen) {
-    $insertrow = self::$db->updateRow("UPDATE public.denuncia SET titulo = ?, descripcion = ?, fecha_publicacion = ?, fecha_ejecucion = ?, id_denunciante = ? where id_categoria= ? , id_estado_denuncia = ? , id_autoridad = ? , imagen = ? ", array ("{$title}","{$descripcion}","{$fecha_publicacion}","{$fecha_ejecucion}","{$id_denunciante}","{$id_categoria}","{$id_estado_denuncia}","{$id_autoridad}","{$imagen}",$id));
+function updateDenuncia($id,$titulo, $descripcion, $fecha_publicacion, $fecha_ejecucion, $id_denunciante,$id_ciudad,$id_parroquia, $id_categoria, $id_estado_denuncia, $id_autoridad, $imagen) {
+    $insertrow = self::$db->updateRow("UPDATE public.denuncia SET titulo = ?, descripcion = ?, fecha_publicacion = ?, fecha_ejecucion = ?, id_denunciante = ?,id_ciudad = ?, id_parroquia = ? , id_categoria = ? , id_estado_denuncia = ? , id_autoridad = ? , imagen = ?  where id_denuncia= ? ", array ("{$titulo}","{$descripcion}","{$fecha_publicacion}","{$fecha_ejecucion}","{$id_denunciante}","{$id_categoria}","{$id_ciudad}","{$id_parroquia}","{$id_estado_denuncia}","{$id_autoridad}","{$imagen}",$id));
 
 }
 function deleteDenuncia($id) {
     $deleterow = self::$db->deleteRow("DELETE FROM public.denuncia where id_denuncia= ? ", array ("{$id}"));
 
 }
-function insertDenuncia($titulo, $descripcion, $fecha_publicacion, $fecha_ejecucion, $id_denunciante, $id_categoria, $id_estado_denuncia, $id_autoridad, $imagen) {
-    $rows = self::$db->insertRow("INSERT INTO public.denuncia (titulo, descripcion, fecha_publicacion, fecha_ejecucion, id_denunciante, id_categoria,id_estado_denuncia) VALUES (?,?,?,?,?,?,?,?,?)", array ("{$title}","{$descripcion}","{$fecha_publicacion}","{$fecha_ejecucion}","{$id_denunciante}","{$id_categoria}","{$id_estado_denuncia}","{$id_autoridad}","{$imagen}"));             
+function insertDenuncia($titulo, $descripcion, $fecha_publicacion, $fecha_ejecucion, $id_denunciante,$id_ciudad,$id_parroquia, $id_categoria, $id_estado_denuncia, $id_autoridad, $imagen) {
+    $rows = self::$db->insertRow("INSERT INTO public.denuncia(titulo,descripcion,fecha_publicacion,fecha_ejecucion,id_denunciante,id_ciudad,id_parroquia,id_categoria,id_estado_denuncia,id_autoridad,imagen) VALUES (?,?,?,?,?,?,?,?,?,?,?)", array ("{$titulo}","{$descripcion}","{$fecha_publicacion}","{$fecha_ejecucion}","{$id_denunciante}","{$id_ciudad}","{$id_parroquia}","{$id_categoria}","{$id_estado_denuncia}","{$id_autoridad}","{$imagen}"));             
   }
 
 

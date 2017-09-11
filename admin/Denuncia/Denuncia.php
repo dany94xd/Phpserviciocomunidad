@@ -9,23 +9,21 @@ class Denuncia
     private $fecha_ejecucion;
     private $id_denunciante;
     private $id_ciudad;
-    private $idparroquia;
-    private $id_categoria;
     private $id_parroquia;
-    private $idciudad;
+    private $id_categoria;
     private $id_estado_denuncia;
     private $id_autoridad;
     private $imagen;
     
-     function __construct($id_denuncia, $titulo, $descripcion, $fecha_publicacion,$fecha_ejecucion, $id_denunciante, $idciudad, $idparroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen) {
+     function __construct($id_denuncia, $titulo, $descripcion, $fecha_publicacion,$fecha_ejecucion, $id_denunciante, $id_ciudad, $id_parroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen) {
        $this->id_denuncia = $id_denuncia;
        $this->titulo = $titulo;
        $this->descripcion = $descripcion;
        $this->fecha_publicacion = $fecha_publicacion;
        $this->fecha_ejecucion = $fecha_ejecucion;
        $this->id_denunciante=$id_denunciante;
-       $this->idciudad=$idciudad;
-       $this->idparroquia=$idparroquia;
+       $this->id_ciudad=$id_ciudad;
+       $this->id_parroquia=$id_parroquia;
        $this->id_categoria=$id_categoria;
        $this->id_estado_denuncia=$id_estado_denuncia;
        $this->id_autoridad=$id_autoridad;
@@ -70,18 +68,18 @@ class Denuncia
      function getIdDenunciante(){
        return $this->id_denunciante;
      } 
-     function setIdCiudad($idciudad){
-       $this->idciudad = $idciudad;
+     function setIdCiudad($id_ciudad){
+       $this->id_ciudad = $id_ciudad;
      } 
      function getIdCiudad(){
-       return $this->idciudad;
+       return $this->id_ciudad;
      } 
 
-     function setIdParroquia($idparroquia){
-       $this->idparroquia = $idparroquia;
+     function setIdParroquia($id_parroquia){
+       $this->id_parroquia = $id_parroquia;
      } 
      function getIdParroquia(){
-       return $this->idparroquia;
+       return $this->id_parroquia;
      } 
       function setIdCategoria($id_categoria){
        $this->id_categoria = $id_categoria;
