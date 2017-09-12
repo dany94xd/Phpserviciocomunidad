@@ -26,6 +26,9 @@ session_start();
 			margin: 25px;
 			
 		}
+		img{
+			width: 200px;
+		}
 	</style>
 <body>
 
@@ -36,7 +39,7 @@ session_start();
 if (isset($_SESSION['MiSession'])) {
 session_destroy();
 
-echo "<img src='../images/cierredeSesion.jpg'>";
+echo "<img src='../images/cierredesesion.jpg'>";
 echo "<div>";
 echo "Se ha destruido sesion exitosamente<br/>";
 echo "</div>";
