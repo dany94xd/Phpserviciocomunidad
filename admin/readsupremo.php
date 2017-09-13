@@ -13,13 +13,23 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
+
+body{
+    text-align: center;
+}
+.logo{
+    width: 200px;
+}
+
+h1{
+    width: 100%;
+}
 #contenedor {
     display: table;
-    border: 2px solid #000;
-    width: 333px;
     text-align: center;
     margin: 0 auto;
 }
+
 #contenidos {
     display: table-row;
 }
@@ -49,28 +59,28 @@ session_start();
     echo "</nav>";
 
  
-    echo "<div class='imagenMain'>";
-    echo "<img src=\"../images/service.svg\">"; 
+    
+    echo "<img class='logo' src=\"../images/service.svg\">"; 
     echo "<h1>Tu voz ciudadana</h1>";
-    echo "</div>";
+    
    
     echo "<div id='contenedor'>";
 
-    echo "<div id='contenidos espacio'>";
+    echo "<div id='contenidos'>";
     echo "<div id='columna'><img src=\"../images/user1.png\"><a href='readUsuario.php'>Usuario</a></div>";   
     echo "<div id='columna'><img src=\"../images/user3.png\"><a href='readTipoUsuario.php'>TipoUsuario</a></div>";
     echo "<div id='columna'><img src=\"../images/poli2.png\"><a href='readAutoridad.php'>Autoridad</a></div>";
     echo "<div id='columna'><img src=\"../images/tipoAuto.png\"><a href='readTipoAutoridad.php'>Tipo de Autoridad</a></div>";
     echo "</div>";
 
-    echo "<div id='contenidos espacio'>";
+    echo "<div id='contenidos'>";
     echo "<div id='columna'><img src=\"../images/servicio.png\"><a href='readCategoria.php'>Categorias</a></div>";
     echo "<div id='columna'><img src=\"../images/denuncia.png\"><a href='readDenuncia.php'>Denuncia</a></div>";
     echo "<div id='columna'><img src=\"../images/comentario.png\"><a href='readComentario.php'>Comentario</a></div>";
     echo "<div id='columna'><img src=\"../images/denunciantes.png\"><a href='readDenunciante.php'>Denunciante</a></div>";
     echo "</div>";
 
-    echo "<div id='contenidos espacio'>";
+    echo "<div id='contenidos'>";
     echo "<div id='columna'><img src=\"../images/provincia.png\"><a href='readProvincia.php'>Provincia</a></div>";
     echo "<div id='columna'><img src=\"../images/ciudad.png\"><a href='readCiudad.php'>Ciudad</a></div>";
     echo "<div id='columna'><img src=\"../images/parroquia.png\"><a href='readParroquia.php'>Parroquia</a></div>";

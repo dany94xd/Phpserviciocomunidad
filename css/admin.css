@@ -88,6 +88,13 @@ left:13em;
 #columna img{
 	width: 80px;
 
+.logo{
+	width: 200px;
+}
+
+h1{
+	width: 200px;
+}
 
 }
 #columna{
