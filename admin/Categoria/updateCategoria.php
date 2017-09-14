@@ -28,7 +28,7 @@ echo "<nav class='navbar navbar-default'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='createCargo.php'>Nuevo</a></li>";
+			echo "<li><a href='crearcategoria.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";

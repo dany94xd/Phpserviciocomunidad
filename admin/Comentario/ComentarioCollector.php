@@ -25,8 +25,8 @@
 			return $ObjComentario;
 		}
 
-		function updateComentario($id_comentario,$descripccion){
-			$insertRow = self::$db->updateRow("UPDATE public.comentario SET descripccion = ? WHERE id_comentario = ?", array ("{$descripcion}",$id_comentario));
+		function updateComentario($id,$descripccion,$id_denuncia,$id_denunciante){
+			$insertRow = self::$db->updateRow("UPDATE public.comentario SET descripccion = ? , id_denuncia = ? , id_denunciante = ? WHERE id_comentario = ?", array ("{$descripcion}","{$id_denuncia}","{$id_denunciante}",$id));
 
 		}
 
@@ -34,8 +34,8 @@
 			$deleteRow = self::$db->deleteRow("DELETE FROM public.comentario WHERE id_comentario = ?" , array ("{$id}"));
 		}
 
-		function insertComentario($descripccion) {
-    $rows = self::$db->insertRow("INSERT INTO public.comentario(descripccion) VALUES (?)", array ("{$descripcion}"));             
+		function insertComentario($descripccion,$id_denuncia,$id_denunciante) {
+    $rows = self::$db->insertRow("INSERT INTO public.comentario(descripccion,id_denuncia,id_denunciante) VALUES (?,?,?)", array ("{$descripcion}","{$id_denuncia}","{$descripcion}"));             
   }
 	}
 

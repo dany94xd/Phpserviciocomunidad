@@ -26,7 +26,7 @@ function updateDenunciante($id,$nombre, $apellido, $email, $idusuario) {
 
 }
 function deleteDenunciante($id) {
-    $deleterow = self::$db->deleteRow("DELETE FROM public.denunciante where iddenunciante= ? ", array ("{$id}"));
+    $deleterow = self::$db->deleteRow("DELETE FROM public.denunciante where id_denunciante= ? ", array ("{$id}"));
 
 }
 function insertDenunciante($nombre, $apellido, $email, $idusuario) {

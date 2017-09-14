@@ -40,11 +40,11 @@ session_start();
     echo "</nav>";
 
 
-$descripcion = $_POST['descripcion'];
+$descripccion = $_POST['descripccion'];
 
 include_once("ComentarioCollector.php");
 $ComentarioCollectorObj = new ComentarioCollector();
-$ComentarioCollectorObj->insertComentario($descripcion);
+$ComentarioCollectorObj->insertComentario($descripccion);
 
 echo "<br>";
 

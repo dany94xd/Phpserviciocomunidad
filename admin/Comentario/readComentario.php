@@ -49,7 +49,7 @@ echo "<table class='table'>";
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
-echo "     <th>Nombre</th>";
+echo "     <th>descripcion</th>";
 echo "     <th>denuncia</th>";
 echo "     <th>denunciante</th>";  
 echo "</tr>"; 
@@ -64,8 +64,8 @@ echo "<td>".$c->getDescripcion()."</td>";
 echo "<td>".$c->getIdDenuncia()."</td>";
 echo "<td>".$c->getIdDenunciante()."</td>";
 
-    echo "<td><a href='updateCategoria.php?id=".$c->getIdComentario()."&nombre=".$c->getDescripcion()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCategoria.php?id=".$c->getIdComentario()."&nombre=".$c->getDescripcion()."'>Eliminar</a></td>"; 
+    echo "<td><a href='updateComentario.php?id=".$c->getIdComentario()."&descripccion=".$c->getDescripcion()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteComentario.php?id=".$c->getIdComentario()."&descripccion=".$c->getDescripcion()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 
 
