@@ -51,12 +51,12 @@ session_start();
 			<div class="menu-box">
 				<ul class="menu">
 					<li><a class="active" href="#"><span>Inicio</span></a></li>
-					<li><a href="about.html"><span>Quienes Somos</span></a></li>
-					<li><a href="services.html"><span>Categorias</span></a></li>
+					<li><a href="about2.php"><span>Quienes Somos</span></a></li>
+					<li><a href="services2.php"><span>Categorias</span></a></li>
 					
 				<!--	<li><a href="single-post.html"><span>Single Post</span></a></li> -->
-					<li><a href="formularioDenuncia.html"><span>Nueva Denuncia</span></a></li>
-					<li><a href="contact.html"><span>Contáctenos</span></a></li>
+					<li><a href="formularioDenuncia2.php"><span>Nueva Denuncia</span></a></li>
+					<li><a href="contact2.php"><span>Contáctenos</span></a></li>
 					<li><a href="#"><span>
 							<?php
 
