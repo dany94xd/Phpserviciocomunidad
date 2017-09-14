@@ -58,7 +58,6 @@ session_start();
 <li><a href="about.html"><span>Quiénes Somos</span></a></li>
 <li><a href="services.html"><span>Categorías</span></a></li>
 <li><a class="active" href="login.html"><span>Iniciar Sesión</span></a></li>
-<li><a href="formularioDenuncia.html"><span>Nueva Denuncia</span></a></li>
 <li><a  href="contact.html"><span>Contáctenos</span></a></li>
 </ul>					
 </div>
