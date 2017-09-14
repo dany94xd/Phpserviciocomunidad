@@ -94,18 +94,18 @@ session_start();
 </div>
 
 
-<form id="contact-form" action="login.php" method= "post" onsubmit= "return validar()">
+<form id="contact-form" action="admin/Usuario/registrado.php" method= "post" onsubmit= "return validar()">
 
 <div style="height: 20px;"></div>
 <div class="text-fieldsl"></div>
 
 <div class="float-input">
-<input name="nombres" id="nombres" type="text" required autocomplete="off" placeholder="Nombres:">
+<input name="nombre" id="nombre" type="text" required autocomplete="off" placeholder="Nombres:">
 <span><i class="fa fa-user"></i></span>
 </div>
 
 <div class="float-input">
-<input name="apellidos" id="apellidos" type="text" required autocomplete="off" placeholder="Apellidos:">
+<input name="apellido" id="apellido" type="text" required autocomplete="off" placeholder="Apellidos:">
 <span><i class="fa fa-user"></i></span>
 </div>
 
@@ -120,7 +120,7 @@ session_start();
 </div>
 
 <div class="registrarse float-input">
-<input name="clave" id="clave" type="password" required autocomplete="off" placeholder="Contraseña:">
+<input name="contrasenia" id="contrasenia" type="password" required autocomplete="off" placeholder="Contraseña:">
 <span><i class="fa fa-lock"></i></span>
 </div>
 

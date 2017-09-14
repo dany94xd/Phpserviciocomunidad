@@ -80,7 +80,7 @@ $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
              <select name='tipousuario'  id= 'tipousuario' class='form-control' required>
 		
 <?php
-	include_once("../TipoUsuarioCollector.php");
+	include_once("../TipoUsuario/TipoUsuarioCollector.php");
 	$TipoUsuarioCollectorObj = new TipoUsuarioCollector(); 
 	foreach ($TipoUsuarioCollectorObj->showTipoUsuarios() as $c){
 	   if($c->getIdTipoUsuario()==$ObjUsuario->getTipoUsuario()){
