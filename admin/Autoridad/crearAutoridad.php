@@ -32,7 +32,7 @@ include_once("../Usuario/UsuarioCollector.php");
     echo "<div class='container-fluid'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Autoridad</a></div>";
     echo " <ul class='nav navbar-nav'>";
-		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
+		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='crearAutoridad.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";

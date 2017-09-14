@@ -41,11 +41,15 @@ session_start();
 
 
 echo "<form method= 'POST' class='form-horizontal' action= 'nuevacategoria.php' id='categoria' title='categoria' >";
-     echo "<div class='form-group'>";
+     
+
+ echo "<div class='form-group'>";
+         echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'nombre' type='text' id= 'nombre' class='form-control' placeholder='Nombre'>";
+             echo "<input name='nombre' type='text' id= 'nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
+     
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";

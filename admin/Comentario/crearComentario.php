@@ -49,7 +49,8 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevoComentario.php'
 
 
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'descripcion' type='text' id= 'descripcion' class='form-control' placeholder='Descripcion'>";
+             echo "<input name = 'descripccion' type='text' id= 'descripccion' class='form-control' placeholder='Descripcion'>";
+         echo "</div>";
          echo "</div>";
 
 echo "<div class='form-group'>";
@@ -58,7 +59,7 @@ echo "<label for='inputName' class='control-label col-xs-2'>Denuncia:</label>";
              echo "<select name='id_denuncia'  id= 'id_denuncia' class='form-control' required>";
 echo "<option selected></option>";
     foreach ($DenunciaCollectorObj->showDenuncias() as $c){
-    echo "<option value='".$c->getIdDenuncia()."'>".$c->getNombre()."</option>"; 
+    echo "<option value='".$c->getIdDenuncia()."'>".$c->getTitulo()."</option>"; 
        }
 
     echo "</select>";
