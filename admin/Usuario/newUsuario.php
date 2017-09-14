@@ -65,7 +65,7 @@ session_start();
              <select name='tipousuario'  id= 'tipousuario' class='form-control' required>
 		<option selected></option>
 <?php
-include_once("../TipoUsuarioCollector.php");
+include_once("../TipoUsuario/TipoUsuarioCollector.php");
 $TipoUsuarioCollectorObj = new TipoUsuarioCollector(); 
 foreach ($TipoUsuarioCollectorObj->showTipoUsuarios() as $c){
 echo "<option value='".$c->getIdTipoUsuario()."'>".$c->getTipo()."</option>"; 
