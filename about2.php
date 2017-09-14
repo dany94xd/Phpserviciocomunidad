@@ -75,7 +75,7 @@ session_start();
 
 							?>
 					</span></a></li>
-					<li><a href="#"><span>Cerrar Sesion</span></a></li>
+					<li><a href="admin/salir.php"><span>Cerrar Sesion</span></a></li>
 				</ul>					
 			</div>
 

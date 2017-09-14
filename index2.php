@@ -24,7 +24,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/flexslider.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-layout.css" media="screen">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-layout.css" media="screen"> -->
 </head>
 <body>
 
@@ -75,7 +75,7 @@ session_start();
 
 							?>
 					</span></a></li>
-					<li><a href="#"><span>Cerrar Sesion</span></a></li>
+					<li><a href="admin/salir.php"><span>Cerrar Sesion</span></a></li>
 				</ul>					
 			</div>
 
@@ -332,7 +332,7 @@ session_start();
 	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src=".js/bootstrap-layout.js"></script>
+    <!-- <script type="text/javascript" src=".js/bootstrap-layout.js"></script> -->
 
 
 </body>
