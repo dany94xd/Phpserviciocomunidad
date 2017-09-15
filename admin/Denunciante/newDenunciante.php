@@ -71,7 +71,7 @@ if (isset($_SESSION['MiSession'])){
       
 <label for='inputName' class='control-label col-xs-2'>Usuario:</label>
         <div class='col-xs-10'>
-             <select name='idusuario'  id= 'idusuario' class='form-control' required>
+             <select name='id_usuario'  id= 'id_usuario' class='form-control' required>
 		<option selected></option>
 <?php
 include_once("../Usuario/UsuarioCollector.php");
