@@ -59,7 +59,7 @@ echo "<div class='container'>";
 echo "  <h2>Comentario</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$descripcion</div>";
+echo "    <div class='panel-body'>$descripccion</div>";
 echo "  </div>";
 echo "</div>";
 ?>
