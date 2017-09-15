@@ -45,10 +45,13 @@ if (isset($_SESSION['MiSession'])){
 
 
 $descripccion = $_POST['descripccion'];
+	$id_denuncia=$_POST['id_denuncia'];
+$id_denunciante=$_POST['id_denunciante'];
+
 
 include_once("ComentarioCollector.php");
 $ComentarioCollectorObj = new ComentarioCollector();
-$ComentarioCollectorObj->insertComentario($descripccion);
+$ComentarioCollectorObj->insertComentario($descripccion,$id_denuncia,$id_denunciante);
 
 echo "<br>";
 
