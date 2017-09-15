@@ -106,7 +106,7 @@ session_start();
                 <div class="text-fields">
 
 		<div class="float-input">
-		<input name="name" id="name" type="text" placeholder="Nombres y Apellidos">
+		<input name="name" id="name" type="text" placeholder="Titulo">
 		<span><i class="fa fa-user"></i></span>
 	        </div>              
 
@@ -116,7 +116,7 @@ session_start();
                 </div>
 
                <div class="float-input">                    
-                 <input type="text" name="problema" placeholder="Problema">
+                 <input type="text" name="problema" placeholder="Parroquia">
                  <span><i class="fa fa-pencil fa-fw"></i></span>  
                 </div>
 
@@ -142,7 +142,21 @@ session_start();
 
      <div class="submit-area espacio">
       <textarea name="comment" id="comment" placeholder="Ingresa tu denuncia"></textarea>
-        <a id="fotoDenu" href="#" style="padding:5px">Subir Foto...</a>
+
+<div class="form-group">
+<label for='inputName' class='control-label col-xs-2'>Imagen:</label>
+<div class='col-xs-10'>
+
+<!-- <?php 
+// $img = $_GET['imagen'];
+ echo "<img src='../perfil/$img' width='50' height='50' />"?> -->
+  <input id="imagen" name="imagen" size="30" type="file">
+
+
+</div>
+                
+            </div>
+
 	<input type="submit" id="submit_contact" class="main-button" value="Enviar">        
 	<div id="msg" class="message"></div>
      </div>
