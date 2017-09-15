@@ -17,6 +17,7 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+
 <header>
 
 </header>
@@ -26,6 +27,7 @@ if (isset($_SESSION['MiSession'])){
 
 </section>
 <aside>
+
 <?php
 
  echo "<nav class='navbar navbar-default'>";
@@ -76,7 +78,6 @@ echo "</div>";
 
 
 ?>
-<div> <a href="readDenuncia.php">Regresar</a></div>
 </aside>
 <?php
 

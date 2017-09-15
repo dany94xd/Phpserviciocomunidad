@@ -17,6 +17,8 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+
+
 <section>
 </section>
 <section>
@@ -57,20 +59,10 @@ echo "<br>";
 ?>
 
 <div class="text-fieldsl">
-              <div> <a href="readDenuncia.php">Regresar</a></div>                          
+                                        
 </div>
 
 </aside>
-<?php
-
-}
-
-    
-    else {
-       echo "permiso denegado";
-       echo"<a href='../index.php'>inicia sesion</a>";
-    }
- ?>
 </body>
 </html>
 

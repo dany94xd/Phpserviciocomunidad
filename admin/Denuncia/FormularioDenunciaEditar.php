@@ -14,9 +14,12 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+
+
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+
 <section>
 </section>
 <section>
@@ -85,7 +88,7 @@ $ObjDenuncia=$DenunciaCollectorObj->showDenuncia($id);
         <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Ejecucion:</label>
          <div class="col-xs-10">
-             <input name = "fecha" type="date" id= "fecha" step="2" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaEjecucion(); ?>" />
+             <input name = "fecha" type="date" id= "fecha" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaEjecucion(); ?>" />
                       </div>
      </div>
 <!-- ****************************************Combo Box Denunciante************************************************** -->
@@ -228,7 +231,6 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
      <div class="form-group">
-     <div> <a href="readDenuncia.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -238,6 +240,7 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 </aside>
+
 <?php
 
 }

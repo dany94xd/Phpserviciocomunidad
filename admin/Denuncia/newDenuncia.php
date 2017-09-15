@@ -14,9 +14,11 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+
 <section>
 </section>
 <section>
@@ -65,14 +67,14 @@ echo "<nav class='navbar navbar-default'>";
       <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Publicacion:</label>
          <div class="col-xs-10">
-             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" />
+             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion"  step="1" min="2017-01-01" max="2017-12-31"class="form-control" placeholder="fecha" />
                       </div>
      </div>
 
         <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Ejecucion:</label>
          <div class="col-xs-10">
-             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="2" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
+             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
                       </div>
      </div>
 <!-- ****************************************Combo Box Denunciante************************************************** -->
@@ -201,7 +203,6 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
      <div class="form-group">
-     <div> <a href="readDenuncia.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button name="btnGuardar" type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -211,6 +212,7 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 </aside>
+
 <?php
 
 }
@@ -222,7 +224,6 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
     }
  ?>
 </body>
-
 </html>
 <?php
 if (isset($_POST['btnGuardar'])){
