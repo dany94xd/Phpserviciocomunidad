@@ -14,7 +14,7 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
-?php
+<?php
 if (isset($_SESSION['MiSession'])){
     ?>
 <header>
