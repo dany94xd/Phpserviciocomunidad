@@ -44,7 +44,7 @@ $id=$_GET["id"];
 
 include_once("EstadoDenunciaCollector.php");
 $EstadoDenunciaCollectorObj= new EstadoDenunciaCollector();
-$EstadoDenunciaCollectorObj->deleteEstadoDenunciante($id);
+$EstadoDenunciaCollectorObj->deleteEstadoDenuncia($id);
 echo "<br>";
 
 echo "<div class='container'>";
