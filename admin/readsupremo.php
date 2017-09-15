@@ -67,7 +67,7 @@ if (isset($_SESSION['MiSession'])){
     
     else {
        // echo "permiso denegado";
-        echo"<a href='../index.php'>iniciar sesion</a>";
+        echo"<a href='index.php'>iniciar sesion</a>";
     }
  ?>
 
