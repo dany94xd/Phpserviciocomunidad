@@ -18,6 +18,23 @@ session_start();
 <aside>
 <?php
 
+
+echo "<nav class='navbar navbar-default'>";
+	  echo "<div class='container-fluid'>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
+		echo " <ul class='nav navbar-nav'>";
+		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
+			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
+			echo "<li><a href='readUsuario.php'>Consulta</a></li>";
+
+		echo "</ul>";
+		echo " <ul class='nav navbar-nav navbar-right'>";
+			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
+			echo "<li><a href='../salir.php'><span class='glyphicon glyphicon-log-out'></span>Salir</a></li>";
+		echo "</ul>";
+	  echo "</div>";
+	echo "</nav>";
+
 $id=$_GET["id"];
 
 include_once("EstadoDenunciaCollector.php");
