@@ -14,6 +14,9 @@ session_start();
 <link href="../../css/tablas.css" rel="stylesheet" >
 </head>
 <body>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 
 <aside>
 <?php
@@ -107,5 +110,16 @@ echo "<option value='".$c->getIdDenunciante()."'>".$c->getNombre()."</option>";
 </form>
 
 </aside>
+
+<?php
+
+}
+
+    
+    else {
+       // echo "permiso denegado";
+        echo"<a href='../index.php'>iniciar sesion</a>";
+    }
+ ?>
 </body>
 </html>
