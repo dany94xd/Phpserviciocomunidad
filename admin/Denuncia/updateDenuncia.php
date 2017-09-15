@@ -57,7 +57,11 @@ $idparroquia=$_POST["idparroquia"];
 $id_categoria=$_POST["id_categoria"];
 $id_estado_denuncia=$_POST["id_estado_denuncia"];
 $id_autoridad=$_POST["id_autoridad"];
-$imagen=$_POST["imagen"];
+$imagen=$_FILES['imagen']['name'];
+
+$archivo = $_FILES['imagen']['tmp_name'];
+$destino = "../../perfil/". $_FILES['imagen']['name'];
+move_uploaded_file($archivo,$destino);
 
 
 include_once("DenunciaCollector.php");
