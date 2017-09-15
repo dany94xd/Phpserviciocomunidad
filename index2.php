@@ -1,5 +1,8 @@
-<!doctype html>
+<?php
+session_start();
+?>
 
+<!DOCTYPE html>
 
 <html lang="en" class="no-js">
 
@@ -47,19 +50,32 @@
 
 			<div class="menu-box">
 				<ul class="menu">
-					<li><a class="active" href="index.html"><span>Inicio</span></a></li>
-					<li><a href="about.html"><span>Quienes Somos</span></a></li>
-					<li ><a href="#" data-toggle="sidebar-collapse"><span>Categorías</span></a>
-                        <ul class="sidebar-submenu">
-                            <li class="sidebar-menu-item"><a href="index.html" class="sidebar-menu-button">Ver Todas</a></li>
-                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Robos</a></li>
-                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Accidentes</a></li>
-                            <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Malos Servicios</a></li>
-                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Calles Destruidas</a></li>
-    </ul>                             
-                    </li>
-					<li><a href="login.html"><span>Iniciar Sesión</span></a></li>
-					<li><a href="contact.html"><span>Contáctenos</span></a></li>
+					<li><a class="active" href="#"><span>Inicio</span></a></li>
+					<li><a href="about2.php"><span>Quienes Somos</span></a></li>
+					<li><a href="services2.php"><span>Categorias</span></a></li>
+					
+				<!--	<li><a href="single-post.html"><span>Single Post</span></a></li> -->
+					<li><a href="formularioDenuncia2.php"><span>Nueva Denuncia</span></a></li>
+					<li><a href="contact2.php"><span>Contáctenos</span></a></li>
+					<li><a href="#"><span>
+							<?php
+
+							//$_SESSION['MiSession']= $_POST['usuario'];
+							// $nombre= $_POST['usuario'];
+							// $password= $_POST['contrasenia'];
+
+							if (isset($_SESSION['MiSession'])) {
+							echo "Bienvenido: (" . $_SESSION ['MiSession'] . ")";
+							$usuario=$_SESSION['MiSession'];
+
+							}else{
+							echo '<script>window.location.href = "index.php";</script>';
+							 
+							}
+
+							?>
+					</span></a></li>
+					<li><a href="admin/salir.php"><span>Cerrar Sesion</span></a></li>
 				</ul>					
 			</div>
 
@@ -316,7 +332,7 @@
 	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-    <!-- <script type="text/javascript" src="js/bootstrap-layout.js"></script> -->
+    <!-- <script type="text/javascript" src=".js/bootstrap-layout.js"></script> -->
 
 
 </body>

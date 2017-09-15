@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 
 
@@ -52,13 +56,30 @@
 
 			<div class="menu-box">
 				<ul class="menu">
-					<li><a href="index.html"><span>Inicio</span></a></li>
-					<li><a href="about.html"><span>Quiénes Somos</span></a></li>
-					<li><a class="active" href="services.html"><span>Categorías</span></a></li>
-					<li><a href="login.html"><span>Iniciar Sesión</span></a></li>
-					<!-- <li><a href="single-post.html"><span>Single Post</span></a></li> -->
-					<!-- <li><a href="formularioDenuncia.html"><span>Nueva Denuncia</span></a></li> -->
-					<li><a href="contact.html"><span>Contáctenos</span></a></li>
+					<li><a href="index2.php"><span>Inicio</span></a></li>
+					<li><a href="about2.php"><span>Quiénes Somos</span></a></li>
+					<li><a class="active" href="#"><span>Categorías</span></a></li>
+					<li><a href="formularioDenuncia2.php"><span>Nueva Denuncia</span></a></li>
+					<li><a href="contact2.php"><span>Contáctenos</span></a></li>
+					<li><a href="#"><span>
+							<?php
+
+							//$_SESSION['MiSession']= $_POST['usuario'];
+							// $nombre= $_POST['usuario'];
+							// $password= $_POST['contrasenia'];
+
+							if (isset($_SESSION['MiSession'])) {
+							echo "Bienvenido: (" . $_SESSION ['MiSession'] . ")";
+							$usuario=$_SESSION['MiSession'];
+
+							}else{
+							echo '<script>window.location.href = "index.php";</script>';
+							 
+							}
+
+							?>
+					</span></a></li>
+					<li><a href="admin/salir.php"><span>Cerrar Sesion</span></a></li>
 				</ul>					
 			</div>
 
