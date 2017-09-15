@@ -17,6 +17,10 @@ session_start();
 <header>
 
 </header>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
+
 <section>
 </section>
 <section>
@@ -85,5 +89,15 @@ echo "<option value='".$c->getIdTipoUsuario()."'>".$c->getTipo()."</option>";
 
 
 </aside>
+<?php
+}
+
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>inicia sesion</a>";
+    }
+ ?>
+
 </body>
 </html>
