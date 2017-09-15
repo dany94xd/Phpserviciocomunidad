@@ -13,9 +13,14 @@ session_start();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="../../css/tablas.css" rel="stylesheet" ></head>
 <body>
+
 <header>
 
 </header>
+
+<?php
+if (isset($_SESSION['MiSession'])){
+?>
 
 <aside>
 <?php
@@ -71,9 +76,16 @@ echo "</form>";
 <div class="text-fieldsl">
   <a href='readCiudad.php'>Regresar</a>                                          
 </div>
-
-
-
 </aside>
+<?php
+}   
+    else {
+echo "<center>";
+    echo "<h1>PERMISO DENEGADO</h1>";
+    echo "<br>";
+    echo"<a href='../index.php'><h1>Iniciar Sesión</h1></a>";
+echo "</center>";
+    }
+ ?>
 </body>
 </html>
