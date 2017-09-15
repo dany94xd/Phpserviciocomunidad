@@ -55,7 +55,7 @@ echo "<br>";
 ?>
 
 <div class="text-fieldsl">
-                                        
+              <div> <a href="readDenuncia.php">Regresar</a></div>                          
 </div>
 
 </aside>
