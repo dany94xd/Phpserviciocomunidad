@@ -94,11 +94,12 @@ echo "<option selected></option>";
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
+             echo"<div> <a href='readComentario.php'>Regresar</a></div>";
          echo "</div>";
      echo "</div>";
 echo "</form>";
 ?>
-<div> <a href="readComentario.php">Regresar</a></div>
+
 
 
 </aside>
