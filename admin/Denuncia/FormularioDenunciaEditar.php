@@ -14,9 +14,24 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+<<<<<<< HEAD
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+=======
+<<<<<<< HEAD
+
+
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
+
+=======
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <section>
 </section>
 <section>
@@ -65,27 +80,59 @@ $ObjDenuncia=$DenunciaCollectorObj->showDenuncia($id);
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Titulo:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "titulo" type="text" id= "titulo" class="form-control" placeholder="Titulo" value="<?php echo $ObjDenuncia->getTitulo(); ?>" />
+=======
+<<<<<<< HEAD
+             <input name = "Titulo" type="text" id= "Titulo" class="form-control" placeholder="Titulo" value="<?php echo $ObjDenuncia->getTitulo(); ?>" />
+=======
+             <input name = "titulo" type="text" id= "titulo" class="form-control" placeholder="Titulo" value="<?php echo $ObjDenuncia->getTitulo(); ?>" />
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
          </div>
      </div>
   <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Descripcion:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "descripcion" type="text" id= "descripcion" class="form-control"
+=======
+<<<<<<< HEAD
+             <input name = "Descripcion" type="text" id= "Descripcion" class="form-control"
+=======
+             <input name = "descripcion" type="text" id= "descripcion" class="form-control"
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
  placeholder="Descripcion" value="<?php echo $ObjDenuncia->getDescripcion(); ?>" />
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Publicacion:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "fecha_publicacion" type="date" id= "fecha_publicacion"  class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaPublicacion(); ?>" readonly/>
+=======
+<<<<<<< HEAD
+             <input name = "fecha" type="date" id= "fecha" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaPublicacion(); ?>" readonly/>
+=======
+             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion"  class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaPublicacion(); ?>" readonly/>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
                       </div>
      </div>
 
         <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Ejecucion:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion"   step="1" min="2017-09-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaEjecucion(); ?>" />
+=======
+<<<<<<< HEAD
+             <input name = "fecha" type="date" id= "fecha" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaEjecucion(); ?>" />
+=======
+             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion"   step="1" min="2017-09-01" max="2017-12-31" class="form-control" placeholder="fecha" value="<?php echo $ObjDenuncia->getFechaEjecucion(); ?>" />
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
                       </div>
      </div>
 <!-- ****************************************Combo Box Denunciante************************************************** -->
@@ -114,7 +161,15 @@ echo "<option value='".$c->getIdDenunciante()."'>".$c->getNombre()."</option>";
 
 <label for='inputName' class='control-label col-xs-2'>Ciudad:</label>
          <div class='col-xs-10'>
+<<<<<<< HEAD
              <select name='id_ciudad'  id= 'id_ciudad' class='form-control' required>      
+=======
+<<<<<<< HEAD
+             <select name='idciudad'  id= 'idciudad' class='form-control' required>      
+=======
+             <select name='id_ciudad'  id= 'id_ciudad' class='form-control' required>      
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 include_once("../Ciudad/CiudadCollector.php"); //llamar el collector de la otra tabla
 $CiudadCollectorObj = new CiudadCollector(); 
@@ -133,7 +188,15 @@ echo "<option value='".$c->getIdCiudad()."'>".$c->getNombre()."</option>";
 <div class='form-group'>
  <label for='inputName' class='control-label col-xs-2'>Parroquia: </label>
  <div class="col-xs-10">
+<<<<<<< HEAD
  <select name='id_parroquia'  id= 'id_parroquia' class='form-control' required >
+=======
+<<<<<<< HEAD
+ <select name='idparroquia'  id= 'idparroquia' class='form-control' required >
+=======
+ <select name='id_parroquia'  id= 'id_parroquia' class='form-control' required >
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
   <?php 
 include_once("../Parroquia/ParroquiaCollector.php");
 $ParroquiaCollectorObj = new ParroquiaCollector(); 
@@ -153,7 +216,15 @@ echo "<option value='".$d->getIdParroquia()."'>".$d->getNombre()."</option>";
 
 <label for='inputName' class='control-label col-xs-2'>Categoria:</label>
          <div class='col-xs-10'>
+<<<<<<< HEAD
              <select name='id_categoria'  id= 'id_categoria' class='form-control' required>      
+=======
+<<<<<<< HEAD
+             <select name='idcategoria'  id= 'idcategoria' class='form-control' required>      
+=======
+             <select name='id_categoria'  id= 'id_categoria' class='form-control' required>      
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 include_once("../Categoria/CategoriaCollector.php"); //llamar el collector de la otra tabla
 $CategoriaCollectorObj = new CategoriaCollector(); 
@@ -194,7 +265,15 @@ echo "<option value='".$c->getIdEstadoDenuncia()."'>".$c->getNombre()."</option>
 
 <label for='inputName' class='control-label col-xs-2'>Autoridad:</label>
          <div class='col-xs-10'>
+<<<<<<< HEAD
              <select name='id_autoridad'  id= 'id_autoridad' class='form-control' required>      
+=======
+<<<<<<< HEAD
+             <select name='idautoridad'  id= 'idautoridad' class='form-control' required>      
+=======
+             <select name='id_autoridad'  id= 'id_autoridad' class='form-control' required>      
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 include_once("../Autoridad/AutoridadCollector.php"); //llamar el collector de la otra tabla
 $AutoridadCollectorObj = new AutoridadCollector(); 
@@ -228,7 +307,14 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
      <div class="form-group">
+<<<<<<< HEAD
      <div> <a href="readDenuncia.php">Regresar</a></div>
+=======
+<<<<<<< HEAD
+=======
+     <div> <a href="readDenuncia.php">Regresar</a></div>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -238,6 +324,13 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 </aside>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 
 }

@@ -45,14 +45,30 @@ $no=$_GET['nombre'];
 include_once("ProvinciaCollector.php");
 $ProvinciaCollectorObj= new ProvinciaCollector();
 $ProvinciaCollectorObj->deleteProvincia($id);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "<br>";
 
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Provincia Eliminada Correctamente</div>";
+<<<<<<< HEAD
 echo "<div class='panel-body'>$nombre</div>";
+=======
+<<<<<<< HEAD
+echo "<div class='panel-body'>$no</div>";
+=======
+echo "<div class='panel-body'>$nombre</div>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "</div>";
 echo "</div>";
 ?>
@@ -62,7 +78,14 @@ echo "</div>";
 </div>
 
 
+<<<<<<< HEAD
 ?>
+=======
+<<<<<<< HEAD
+=======
+?>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </aside>
 <?php
 }   

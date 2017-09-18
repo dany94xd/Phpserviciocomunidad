@@ -35,7 +35,14 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='crearComentario.php'>Nuevo</a></li>";
+<<<<<<< HEAD
         echo "<li><a href='readComentario.php'>Consulta</a></li>";
+=======
+<<<<<<< HEAD
+=======
+        echo "<li><a href='readComentario.php'>Consulta</a></li>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -46,8 +53,19 @@ if (isset($_SESSION['MiSession'])){
 
 
 $descripccion = $_POST['descripccion'];
+<<<<<<< HEAD
 $id_denuncia = $_POST['id_denuncia'];
 $id_denunciante = $_POST['id_denunciante'];
+=======
+<<<<<<< HEAD
+	$id_denuncia=$_POST['id_denuncia'];
+$id_denunciante=$_POST['id_denunciante'];
+
+=======
+$id_denuncia = $_POST['id_denuncia'];
+$id_denunciante = $_POST['id_denunciante'];
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 
 include_once("ComentarioCollector.php");
 $ComentarioCollectorObj = new ComentarioCollector();
@@ -60,13 +78,29 @@ echo "  <h2>Comentario</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
 echo "    <div class='panel-body'>$descripccion</div>";
+<<<<<<< HEAD
 
 echo"<div> <a href='readComentario.php'>Regresar</a></div>";
+=======
+<<<<<<< HEAD
+=======
+
+echo"<div> <a href='readComentario.php'>Regresar</a></div>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "  </div>";
 echo "</div>";
 ?>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<div> <a href="readComentario.php">Regresar</a></div>
+=======
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </aside>
 
 <?php
@@ -80,4 +114,12 @@ echo "</div>";
     }
  ?>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3

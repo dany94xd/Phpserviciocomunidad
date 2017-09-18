@@ -70,18 +70,40 @@ $DenunciaCollectorObj->insertDenuncia($titulo,$descripcion,$fecha_publicacion,$f
 echo "<br>";
 
 echo "<div class='container'>";
+<<<<<<< HEAD
+echo "  <h2>Denuncia</h2>";
+=======
+<<<<<<< HEAD
+echo "  <h2>Cargos</h2>";
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
+echo "  <div class='panel panel-default'>";
+echo "    <div class='panel-heading'> Denuncia Actualizada Correctamente</div>";
+echo "   <div class='panel-body'>$titulo</div>";
+<<<<<<< HEAD
+echo " <div> <a href='readDenuncia.php'>Regresar</a></div> ";
+=======
+=======
 echo "  <h2>Denuncia</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'> Denuncia Actualizada Correctamente</div>";
 echo "   <div class='panel-body'>$titulo</div>";
 echo " <div> <a href='readDenuncia.php'>Regresar</a></div> ";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "  </div>";
 echo "</div>";
  
 
 
 ?>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </aside>
 <?php
 

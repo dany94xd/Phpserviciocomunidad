@@ -35,9 +35,25 @@
 		}
 
 		function insertComentario($descripccion,$id_denuncia,$id_denunciante) {
+<<<<<<< HEAD
     $rows = self::$db->insertRow("INSERT INTO public.comentario(descripccion,id_denuncia,id_denunciante) VALUES (?,?,?)", array ("{$descripccion}","{$id_denuncia}","{$id_denunciante}"));             
+=======
+<<<<<<< HEAD
+    $rows = self::$db->insertRow("INSERT INTO public.comentario(descripccion,id_denuncia,id_denunciante) VALUES (?,?,?)", array ("{$descripccion}","{$id_denuncia}","{id_denunciante}"));             
+=======
+    $rows = self::$db->insertRow("INSERT INTO public.comentario(descripccion,id_denuncia,id_denunciante) VALUES (?,?,?)", array ("{$descripccion}","{$id_denuncia}","{$id_denunciante}"));             
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
   }
 	}
 
 
+<<<<<<< HEAD
  ?>
+=======
+<<<<<<< HEAD
+ ?>
+=======
+ ?>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3

@@ -30,8 +30,18 @@ echo "<div class='container-fluid'>";
 echo "<div class='navbar-header'><a class='navbar-brand'>Guardar Ciudad</a></div>";
 echo "<ul class='nav navbar-nav'>";
 echo "<li><a href='../readsupremo.php'>Menú</a></li>";
+<<<<<<< HEAD
 echo "<li><a href='crearComentario.php'>Nuevo</a></li>";
 echo "<li><a href='readComentario.php'>Consulta</a></li>";
+=======
+<<<<<<< HEAD
+echo "<li><a href='createCiudad.php'>Nuevo</a></li>";
+echo "<li><a href='readCiudad.php'>Consulta</a></li>";
+=======
+echo "<li><a href='crearComentario.php'>Nuevo</a></li>";
+echo "<li><a href='readComentario.php'>Consulta</a></li>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "</ul>";
 echo "<ul class='nav navbar-nav navbar-right'>";
 echo "<li><a href='#'>Hola:(" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -54,12 +64,30 @@ echo "<br>";
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Registro Actualizado Correctamente</div>";
+<<<<<<< HEAD
 echo "<div class='text-fieldsl'><a href='readComentario.php'>Regresar</a> </div>";
+=======
+<<<<<<< HEAD
+echo "<div class='panel-body'>$nombre</div>";
+=======
+echo "<div class='text-fieldsl'><a href='readComentario.php'>Regresar</a> </div>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 echo "</div>";
 echo "</div>";
 ?>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<div class="text-fieldsl">
+  <a href='readComentario.php'>Regresar</a>                                          
+</div>
+=======
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </aside>
 
 <?php

@@ -31,7 +31,15 @@ if (isset($_SESSION['MiSession'])){
 
  echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
+<<<<<<< HEAD
     echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Comentario</a></div>";
+=======
+<<<<<<< HEAD
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Categoria</a></div>";
+=======
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Comentario</a></div>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
     echo " <ul class='nav navbar-nav'>";
             echo "<li><a href='../readsupremo.php'>Menú</a></li>";
       echo "<li><a href='crearComentario.php'>Nuevo</a></li>";

@@ -94,12 +94,27 @@ echo "<option selected></option>";
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
+<<<<<<< HEAD
              echo"<div> <a href='readComentario.php'>Regresar</a></div>";
+=======
+<<<<<<< HEAD
+=======
+             echo"<div> <a href='readComentario.php'>Regresar</a></div>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
          echo "</div>";
      echo "</div>";
 echo "</form>";
 ?>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<div> <a href="readComentario.php">Regresar</a></div>
+=======
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 
 
 </aside>

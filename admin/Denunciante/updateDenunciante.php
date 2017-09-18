@@ -36,7 +36,14 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newDenunciante.php'>Nuevo</a></li>";
+<<<<<<< HEAD
         echo "<li><a href='readDenunciante.php'>Consultar</a></li>";
+=======
+<<<<<<< HEAD
+=======
+        echo "<li><a href='readDenunciante.php'>Consultar</a></li>";
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";

@@ -35,6 +35,7 @@ function insertProvincia($nombre) {
   $rows = self::$db->insertRow("INSERT INTO public.provincia(nombre) VALUES (?)", array ("{$nombre}"));             
 }
 
+<<<<<<< HEAD
 // function resetid($id){
 
 //    $rowd =self::$db->reset("select setval('provincia_idprovincia_seq'',1)",array ("{$id}"));
@@ -43,5 +44,19 @@ function insertProvincia($nombre) {
 }
 
 
+=======
+<<<<<<< HEAD
+}
+=======
+// function resetid($id){
+
+//    $rowd =self::$db->reset("select setval('provincia_idprovincia_seq'',1)",array ("{$id}"));
+
+// }
+}
+
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 ?>
 

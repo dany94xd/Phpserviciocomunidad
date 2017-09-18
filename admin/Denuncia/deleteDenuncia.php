@@ -17,6 +17,14 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <section>
 </section>
 <section>
@@ -48,19 +56,46 @@ $DenunciaCollectorObj->deleteDenuncia($id);
 echo "<br>";
 
 	echo "<div class='container'>";
+<<<<<<< HEAD
 	echo "  <h2>Denuncia</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Denuncia Eliminada Correctamente</div>";
 
+=======
+<<<<<<< HEAD
+	echo "  <h2>Usuario</h2>";
+	echo "  <div class='panel panel-default'>";
+	echo "    <div class='panel-heading'>Denuncia Eliminada Correctamente</div>";
+	echo "    <div class='panel-body'>$id</div>";
+=======
+	echo "  <h2>Denuncia</h2>";
+	echo "  <div class='panel panel-default'>";
+	echo "    <div class='panel-heading'>Denuncia Eliminada Correctamente</div>";
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 	echo "  </div>";
 	echo "</div>";
 ?>
 
 <div class="text-fieldsl">
+<<<<<<< HEAD
               <div> <a href="readDenuncia.php">Regresar</a></div>                          
 </div>
 
 </aside>
+=======
+<<<<<<< HEAD
+                                        
+</div>
+
+</aside>
+=======
+              <div> <a href="readDenuncia.php">Regresar</a></div>                          
+</div>
+
+</aside>
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 
 }
@@ -71,6 +106,10 @@ echo "<br>";
        echo"<a href='../index.php'>inicia sesion</a>";
     }
  ?>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </body>
 </html>
 

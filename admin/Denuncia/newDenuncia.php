@@ -14,9 +14,23 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+<<<<<<< HEAD
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+=======
+<<<<<<< HEAD
+
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
+
+=======
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <section>
 </section>
 <section>
@@ -65,14 +79,30 @@ echo "<nav class='navbar navbar-default'>";
       <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Publicacion:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "fecha_publicacion" type="date" id= "fecha_publicacion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" />
+=======
+<<<<<<< HEAD
+             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion"  step="1" min="2017-01-01" max="2017-12-31"class="form-control" placeholder="fecha" />
+=======
+             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" />
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
                       </div>
      </div>
 
         <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Ejecucion:</label>
          <div class="col-xs-10">
+<<<<<<< HEAD
              <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="2" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
+=======
+<<<<<<< HEAD
+             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
+=======
+             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="2" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
                       </div>
      </div>
 <!-- ****************************************Combo Box Denunciante************************************************** -->
@@ -201,7 +231,14 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
      <div class="form-group">
+<<<<<<< HEAD
      <div> <a href="readDenuncia.php">Regresar</a></div>
+=======
+<<<<<<< HEAD
+=======
+     <div> <a href="readDenuncia.php">Regresar</a></div>
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
          <div class="col-xs-offset-2 col-xs-10">
              <button name="btnGuardar" type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -211,6 +248,13 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 </aside>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <?php
 
 }
@@ -222,7 +266,14 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
     }
  ?>
 </body>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 </html>
 <?php
 if (isset($_POST['btnGuardar'])){

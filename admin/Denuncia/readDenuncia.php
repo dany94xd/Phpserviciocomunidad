@@ -17,6 +17,13 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
+>>>>>>> 92dc60c788d1bba883ed51db157f59d39e5cd1e3
 <header>
 
 </header>
