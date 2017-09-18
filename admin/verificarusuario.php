@@ -4,11 +4,10 @@
 //AQUI CONECTAMOS A LA BASE DE DATOS DE POSTGRES
 
 //$conex = "host=localhost port=5432 dbname=comunidad user=postgres password=postgres";
-<<<<<<< HEAD
-$conex = "host=ec2-23-23-248-247.compute-1.amazonaws.com port=5432 dbname=d88jp3b8ks58pn user=dcswcsqsfzpezr password=c7dcdfb6263074314a04ebfd7b86d1b8adab3906a4b1251fe79feab8d881611c";
-=======
+
+//$conex = "host=ec2-23-23-248-247.compute-1.amazonaws.com port=5432 dbname=d88jp3b8ks58pn user=dcswcsqsfzpezr password=c7dcdfb6263074314a04ebfd7b86d1b8adab3906a4b1251fe79feab8d881611c";
+
 $conex = "host=ec2-107-20-226-93.compute-1.amazonaws.com port=5432 dbname=d5pd0jcvebon48 user=gidmuyutqimolp password=cd5b5bebe3cdee715cbbee218dbac75663399a1e8f20122e2b3c723e37adc3fb";
->>>>>>> master
 //$user="obihwaohfkvyyt password=ea5858855a8a07277db5887f17e8080c0467704a2ec10342e726c561461b5352";
 $cnx = pg_connect($conex) or die ("<h1>Error de conexion.</h1> ". pg_last_error());
 session_start();
@@ -47,19 +46,19 @@ if($row = pg_fetch_array($result)){
    </SCRIPT>*/
   }else{
    echo 'Password incorrecto';
-	echo '<script>window.location.href = "index.php";</script>';	
+	echo '<script>window.location.href = "../index.html";</script>';	
   }
  }else{
   echo 'Usuario no existente en la base de datos';
-	echo '<script>window.location.href = "index.php";</script>';
+	echo '<script>window.location.href = "../index.html";</script>';
  }
  pg_free_result($result);
 }else{
  echo 'Debe especificar un usuario y password';
 }
 pg_close();
-<<<<<<< HEAD
+
 ?>
-=======
-?>
->>>>>>> master
+
+
+
