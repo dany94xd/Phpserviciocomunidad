@@ -70,16 +70,18 @@ $DenunciaCollectorObj->insertDenuncia($titulo,$descripcion,$fecha_publicacion,$f
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Cargos</h2>";
+echo "  <h2>Denuncia</h2>";
 echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
+echo "    <div class='panel-heading'> Denuncia Actualizada Correctamente</div>";
 echo "   <div class='panel-body'>$titulo</div>";
+echo " <div> <a href='readDenuncia.php'>Regresar</a></div> ";
 echo "  </div>";
 echo "</div>";
  
 
 
 ?>
+
 </aside>
 <?php
 

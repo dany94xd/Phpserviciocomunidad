@@ -17,8 +17,6 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
-
-
 <section>
 </section>
 <section>
@@ -50,19 +48,29 @@ $DenunciaCollectorObj->deleteDenuncia($id);
 echo "<br>";
 
 	echo "<div class='container'>";
-	echo "  <h2>Usuario</h2>";
+	echo "  <h2>Denuncia</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Denuncia Eliminada Correctamente</div>";
-	echo "    <div class='panel-body'>$id</div>";
+
 	echo "  </div>";
 	echo "</div>";
 ?>
 
 <div class="text-fieldsl">
-                                        
+              <div> <a href="readDenuncia.php">Regresar</a></div>                          
 </div>
 
 </aside>
+<?php
+
+}
+
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>inicia sesion</a>";
+    }
+ ?>
 </body>
 </html>
 

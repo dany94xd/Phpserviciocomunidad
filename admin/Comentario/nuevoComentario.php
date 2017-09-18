@@ -35,6 +35,7 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='crearComentario.php'>Nuevo</a></li>";
+        echo "<li><a href='readComentario.php'>Consulta</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -45,9 +46,8 @@ if (isset($_SESSION['MiSession'])){
 
 
 $descripccion = $_POST['descripccion'];
-	$id_denuncia=$_POST['id_denuncia'];
-$id_denunciante=$_POST['id_denunciante'];
-
+$id_denuncia = $_POST['id_denuncia'];
+$id_denunciante = $_POST['id_denunciante'];
 
 include_once("ComentarioCollector.php");
 $ComentarioCollectorObj = new ComentarioCollector();
@@ -60,11 +60,13 @@ echo "  <h2>Comentario</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
 echo "    <div class='panel-body'>$descripccion</div>";
+
+echo"<div> <a href='readComentario.php'>Regresar</a></div>";
 echo "  </div>";
 echo "</div>";
 ?>
 
-<div> <a href="readComentario.php">Regresar</a></div>
+
 </aside>
 
 <?php
