@@ -257,3 +257,8 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 
+
+
+
+
+
