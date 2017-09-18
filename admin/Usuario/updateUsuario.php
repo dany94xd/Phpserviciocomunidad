@@ -62,7 +62,7 @@ echo "  <h2>Cargos</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$usuario</div>";
-echo "<div> <a href='readUsuario.php'>Regresar</a></div>"
+echo "<div> <a href='readUsuario.php'>Regresar</a></div>";
 echo "  </div>";
 echo "</div>";
  
