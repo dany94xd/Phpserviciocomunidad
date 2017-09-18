@@ -29,11 +29,7 @@ if (isset($_SESSION['MiSession'])){
 
 echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-<<<<<<< HEAD
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuario</a></div>";
-=======
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Estado de Denuncia</a></div>";
->>>>>>> master
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='nuevoestadodenuncia.php'>Nuevo</a></li>";
@@ -57,11 +53,7 @@ echo "<br>";
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Estado Denuncia Eliminado Correctamente</div>";
-<<<<<<< HEAD
 echo "<div class='panel-body'>$no</div>";
-=======
-
->>>>>>> master
 echo "</div>";
 echo "</div>";
 ?>

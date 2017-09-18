@@ -6,26 +6,24 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Tabla Autoridad </title>
+		<title> Eliminar Comentario </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link href="../../css/tablas.css" rel="stylesheet" >
+   <link href="../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
-
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
 <header>
 
 </header>
-<section>
-</section>
-<section>
 
-</section>
+<body>
+
+
 <aside>
 <?php
 
@@ -35,10 +33,6 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='crearComentario.php'>Nuevo</a></li>";
-<<<<<<< HEAD
-=======
-        echo "<li><a href='readComentario.php'>Consulta</a></li>";
->>>>>>> master
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -47,42 +41,18 @@ if (isset($_SESSION['MiSession'])){
     echo "</div>";
     echo "</nav>";
 
-
-$descripccion = $_POST['descripccion'];
-<<<<<<< HEAD
-	$id_denuncia=$_POST['id_denuncia'];
-$id_denunciante=$_POST['id_denunciante'];
-
-=======
-$id_denuncia = $_POST['id_denuncia'];
-$id_denunciante = $_POST['id_denunciante'];
->>>>>>> master
+$id=$_GET["id"];
 
 include_once("ComentarioCollector.php");
-$ComentarioCollectorObj = new ComentarioCollector();
-$ComentarioCollectorObj->insertComentario($descripccion,$id_denuncia,$id_denunciante);
-
-echo "<br>";
-
-echo "<div class='container'>";
-echo "  <h2>Comentario</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$descripccion</div>";
-<<<<<<< HEAD
-=======
-
-echo"<div> <a href='readComentario.php'>Regresar</a></div>";
->>>>>>> master
-echo "  </div>";
-echo "</div>";
+$ComentarioCollectorObj= new ComentarioCollector();
+$ComentarioCollectorObj->deleteComentario($id);
+echo "valor id: ".htmlspecialchars($id)." ha sido eliminado correctamente </br>";
 ?>
 
-<<<<<<< HEAD
-<div> <a href="readComentario.php">Regresar</a></div>
-=======
+<div class="text-fieldsl">
+         <a href='readComentario.php'>Volver al inicio</a>                                    
+</div>
 
->>>>>>> master
 </aside>
 
 <?php
@@ -96,8 +66,4 @@ echo "</div>";
     }
  ?>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> master

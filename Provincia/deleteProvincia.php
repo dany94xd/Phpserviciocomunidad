@@ -45,21 +45,12 @@ $no=$_GET['nombre'];
 include_once("ProvinciaCollector.php");
 $ProvinciaCollectorObj= new ProvinciaCollector();
 $ProvinciaCollectorObj->deleteProvincia($id);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 echo "<br>";
 
 echo "<div class='container'>";
 echo "<div class='panel panel-default'>";
 echo "<div class='panel-heading'>Provincia Eliminada Correctamente</div>";
-<<<<<<< HEAD
 echo "<div class='panel-body'>$no</div>";
-=======
-echo "<div class='panel-body'>$nombre</div>";
->>>>>>> master
 echo "</div>";
 echo "</div>";
 ?>
@@ -69,10 +60,6 @@ echo "</div>";
 </div>
 
 
-<<<<<<< HEAD
-=======
-?>
->>>>>>> master
 </aside>
 <?php
 }   

@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 ?>
@@ -6,7 +7,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Tabla Denunciante </title>
+		<title> Denunciante Actualizado </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -35,10 +36,6 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newDenunciante.php'>Nuevo</a></li>";
-<<<<<<< HEAD
-=======
-        echo "<li><a href='readDenunciante.php'>Consultar</a></li>";
->>>>>>> master
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -47,38 +44,33 @@ if (isset($_SESSION['MiSession'])){
     echo "</div>";
     echo "</nav>";
 
-$nombre=$_POST["nombre"];
-$apellido=$_POST["apellido"];
-$email=$_POST["email"];
-<<<<<<< HEAD
-$id_usuario=$_POST["id_usuario"];
-=======
-$idusuario=$_POST["idusuario"];
->>>>>>> master
+
+$nombre=$_POST['nombre'];
+$id_denunciante=$_POST['id_denunciante'];
+$apellido=$_POST['apellido'];
+$email=$_POST['email'];
+$idusuario=$_POST['idusuario'];
 
 
 include_once("DenuncianteCollector.php");
 $DenuncianteCollectorObj= new DenuncianteCollector();
-<<<<<<< HEAD
-$DenuncianteCollectorObj->insertDenunciante($nombre, $apellido, $email, $id_usuario);
-=======
-$DenuncianteCollectorObj->insertDenunciante($nombre, $apellido, $email, $idusuario);
->>>>>>> master
-
+$DenuncianteCollectorObj->updateDenunciante($id_denunciante,$nombre, $apellido, $email, $idusuario);
 
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Categoria</h2>";
+echo "  <h2>Cargos</h2>";
 echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>".$nombre." ".$apellido."</div>";
+echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
+echo "    <div class='panel-body'>".$nombre.", ".$apellido.", ".$email."</div>";
 echo "  </div>";
 echo "</div>";
+ 
+
+
 ?>
 <div> <a href="readDenunciante.php">Regresar</a></div>
-
 </aside>
 
 <?php
@@ -93,3 +85,10 @@ echo "</div>";
  ?>
 </body>
 </html>
+
+
+
+
+
+
+

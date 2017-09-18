@@ -17,7 +17,10 @@ session_start();
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 <header>
 
 </header>
@@ -27,7 +30,10 @@ if (isset($_SESSION['MiSession'])){
 
 </section>
 <aside>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 <?php
 
  echo "<nav class='navbar navbar-default'>";
@@ -52,6 +58,7 @@ $descripcion = $_POST["descripcion"];
 $fecha_publicacion = $_POST["fecha_publicacion"];
 $fecha_ejecucion = $_POST["fecha_ejecucion"];
 $id_denunciante=$_POST["id_denunciante"];
+<<<<<<< HEAD
 $idciudad=$_POST["idciudad"];
 $idparroquia=$_POST["idparroquia"];
 $id_categoria=$_POST["id_categoria"];
@@ -67,6 +74,22 @@ move_uploaded_file($archivo,$destino);
 include_once("DenunciaCollector.php");
 $DenunciaCollectorObj= new DenunciaCollector();
 $DenunciaCollectorObj->updateDenuncia($id_denuncia,$titulo,$descripcion,$fecha_publicacion,$fecha_ejecucion,$id_denunciante,$idciudad,$idparroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen);
+=======
+$id_ciudad=$_POST["id_ciudad"];
+$id_parroquia=$_POST["id_parroquia"];
+$id_categoria=$_POST["id_categoria"];
+$id_estado_denuncia=$_POST["id_estado_denuncia"];
+$id_autoridad=$_POST["id_autoridad"];
+$imagen=$_POST['imagen'];
+
+// $archivo = $_FILES['imagen']['tmp_name'];
+// $destino = "../../perfil/". $_FILES['imagen']['name'];
+// move_uploaded_file($archivo,$destino);
+
+include_once("DenunciaCollector.php");
+$DenunciaCollectorObj= new DenunciaCollector();
+$DenunciaCollectorObj->updateDenuncia($id_denuncia,$titulo,$descripcion,$fecha_publicacion,$fecha_ejecucion,$id_denunciante,$id_ciudad,$id_parroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen);
+>>>>>>> master
 
 
 echo "<br>";
@@ -82,6 +105,10 @@ echo "</div>";
 
 
 ?>
+<<<<<<< HEAD
+=======
+<div> <a href="readDenuncia.php">Regresar</a></div>
+>>>>>>> master
 </aside>
 <?php
 

@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 	<head>
 		<meta charset ="utf-8">
-		<title> Tabla Denunciante </title>
+		<title> Denuncia Registrada </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,13 +14,12 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
-<header>
-
-</header>
 <?php
 if (isset($_SESSION['MiSession'])){
     ?>
+<header>
 
+</header>
 <section>
 </section>
 <section>
@@ -31,14 +30,10 @@ if (isset($_SESSION['MiSession'])){
 
  echo "<nav class='navbar navbar-default'>";
     echo "<div class='container-fluid'>";
-    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Denunciante</a></div>";
+    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Denuncia</a></div>";
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
-			echo "<li><a href='newDenunciante.php'>Nuevo</a></li>";
-<<<<<<< HEAD
-=======
-        echo "<li><a href='readDenunciante.php'>Consultar</a></li>";
->>>>>>> master
+			echo "<li><a href='newDenuncia.php'>Nuevo</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -47,40 +42,45 @@ if (isset($_SESSION['MiSession'])){
     echo "</div>";
     echo "</nav>";
 
-$nombre=$_POST["nombre"];
-$apellido=$_POST["apellido"];
-$email=$_POST["email"];
-<<<<<<< HEAD
-$id_usuario=$_POST["id_usuario"];
-=======
-$idusuario=$_POST["idusuario"];
->>>>>>> master
 
 
-include_once("DenuncianteCollector.php");
-$DenuncianteCollectorObj= new DenuncianteCollector();
-<<<<<<< HEAD
-$DenuncianteCollectorObj->insertDenunciante($nombre, $apellido, $email, $id_usuario);
-=======
-$DenuncianteCollectorObj->insertDenunciante($nombre, $apellido, $email, $idusuario);
->>>>>>> master
 
+$titulo = $_POST["titulo"];
+$descripcion = $_POST["descripcion"];
+$fecha_publicacion = $_POST["fecha_publicacion"];
+$fecha_ejecucion = $_POST["fecha_ejecucion"];
+$id_denunciante=$_POST["id_denunciante"];
+$id_ciudad=$_POST["id_ciudad"];
+$id_parroquia=$_POST["id_parroquia"];
+$id_categoria=$_POST["id_categoria"];
+$id_estado_denuncia=$_POST["id_estado_denuncia"];
+$id_autoridad=$_POST["id_autoridad"];
+$imagen=$_FILES['imagen']['name'];
+
+$archivo = $_FILES['imagen']['tmp_name'];
+$destino = "../../perfil/". $_FILES['imagen']['name'];
+move_uploaded_file($archivo,$destino);
+
+
+include_once("DenunciaCollector.php");
+$DenunciaCollectorObj= new DenunciaCollector();
+$DenunciaCollectorObj->insertDenuncia($titulo,$descripcion,$fecha_publicacion,$fecha_ejecucion,$id_denunciante,$id_ciudad,$id_parroquia,$id_categoria,$id_estado_denuncia,$id_autoridad,$imagen);
 
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Categoria</h2>";
+echo "  <h2>Cargos</h2>";
 echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>".$nombre." ".$apellido."</div>";
+echo "    <div class='panel-heading'> Registro Actualizado Correctamente</div>";
+echo "   <div class='panel-body'>$titulo</div>";
 echo "  </div>";
 echo "</div>";
+ 
+
+
 ?>
-<div> <a href="readDenunciante.php">Regresar</a></div>
-
 </aside>
-
 <?php
 
 }

@@ -59,11 +59,6 @@ echo "<td>".$c->getIdProvincia()."</td>";
 echo "<td>".$c->getNombre()."</td>";
 echo "<td><a href='updateProvincia.php?id=".$c->getIdProvincia()."&nombre=".$c->getNombre()."'>Editar</a></td>"; 
 echo "<td><a href='deleteProvincia.php?id=".$c->getIdProvincia()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
-<<<<<<< HEAD
-=======
-
-	// echo "<td><a href='deleteProvincia.php?id=".$c->getIdProvincia()."'>Resetear</a></td>"; 
->>>>>>> master
 echo "</tr>"; 
 }
 
@@ -73,12 +68,6 @@ echo "</div>";
 echo "</div>";
 
 ?>
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> master
 </aside>
 <?php
 }   

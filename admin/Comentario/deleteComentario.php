@@ -46,12 +46,28 @@ $id=$_GET["id"];
 include_once("ComentarioCollector.php");
 $ComentarioCollectorObj= new ComentarioCollector();
 $ComentarioCollectorObj->deleteComentario($id);
+<<<<<<< HEAD
 echo "valor id: ".htmlspecialchars($id)." ha sido eliminado correctamente </br>";
 ?>
 
 <div class="text-fieldsl">
          <a href='readComentario.php'>Volver al inicio</a>                                    
 </div>
+=======
+
+
+echo "<br>";
+echo "<div class='container'>";
+echo "<div class='panel panel-default'>";
+echo "<div class='panel-heading'>Ha sido eliminado Correctamente</div>";
+echo "  <a href='readComentario.php'>Volver al inicio</a>  ";
+echo "</div>";
+echo "</div>";
+
+?>
+
+
+>>>>>>> master
 
 </aside>
 

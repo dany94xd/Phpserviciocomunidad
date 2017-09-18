@@ -35,10 +35,6 @@ if (isset($_SESSION['MiSession'])){
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newDenunciante.php'>Nuevo</a></li>";
-<<<<<<< HEAD
-=======
-			
->>>>>>> master
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -75,7 +71,6 @@ if (isset($_SESSION['MiSession'])){
       
 <label for='inputName' class='control-label col-xs-2'>Usuario:</label>
         <div class='col-xs-10'>
-<<<<<<< HEAD
              <select name='id_usuario'  id= 'id_usuario' class='form-control' required>
 		<option selected></option>
 <?php
@@ -84,25 +79,6 @@ $UsuarioCollectorObj = new UsuarioCollector();
 foreach ($UsuarioCollectorObj->showUD() as $c){
 echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
 }
-=======
-             <select name='idusuario'  id= 'idusuario' class='form-control' required>
-		<option selected></option>
-<?php
-include_once("../Usuario/UsuarioCollector.php");
-// $UsuarioCollectorObj = new UsuarioCollector(); 
-// foreach ($UsuarioCollectorObj->showUD() as $c){
-// echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
-// }
-$UsuarioCollectorObj = new UsuarioCollector(); 
-foreach ($UsuarioCollectorObj->showUD() as $c){
-	   // if($c->getIdUsuario()==$ObjDenunciante->getIdUsuario()){
-		echo "<option value='".$c->getIdUsuario()."'selected>".$c->getUsuario()."</option>"; 
-	   // }else{
-		//echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>"; 
-	   // }
-	}
-
->>>>>>> master
 ?>
 	     </select>
         </div>
