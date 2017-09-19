@@ -40,7 +40,7 @@ if (isset($_SESSION['MiSession'])){
      echo "<div class='form-group'>";
          echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name= 'nombre' type='text' id= 'nombre' class='form-control' placeholder='Nombre'>";
+             echo "<input name= 'nombre' type='text' id= 'nombre' class='form-control' placeholder='Nombre' required>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";

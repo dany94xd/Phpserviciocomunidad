@@ -65,14 +65,14 @@ $ObjDenuncia=$DenunciaCollectorObj->showDenuncia($id);
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Titulo:</label>
          <div class="col-xs-10">
-             <input name = "titulo" type="text" id= "titulo" class="form-control" placeholder="Titulo" value="<?php echo $ObjDenuncia->getTitulo(); ?>" />
+             <input name = "titulo" type="text" id= "titulo" class="form-control" placeholder="Titulo" value="<?php echo $ObjDenuncia->getTitulo(); ?>"  required/>
          </div>
      </div>
   <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Descripcion:</label>
          <div class="col-xs-10">
              <input name = "descripcion" type="text" id= "descripcion" class="form-control"
- placeholder="Descripcion" value="<?php echo $ObjDenuncia->getDescripcion(); ?>" />
+ placeholder="Descripcion" value="<?php echo $ObjDenuncia->getDescripcion(); ?>" required/>
          </div>
      </div>
      <div class="form-group">

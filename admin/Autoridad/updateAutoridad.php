@@ -64,19 +64,19 @@ $ObjAutoridad=$AutoridadCollectorObj->showAutoridad($id);
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
-             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $ObjAutoridad->getNombre(); ?>">
+             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $ObjAutoridad->getNombre(); ?>" required>
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Telefono:</label>
          <div class="col-xs-10">
-             <input name = "telefono" type="text" id= "telefono" class="form-control" placeholder="Telefono" value="<?php echo $ObjAutoridad->getTelefono(); ?>">
+             <input name = "telefono" type="text" id= "telefono" class="form-control" placeholder="Telefono" value="<?php echo $ObjAutoridad->getTelefono(); ?>" required>
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">E-mail:</label>
          <div class="col-xs-10">
-             <input name = "email" type="text" id= "email" class="form-control" placeholder="E-mail" value="<?php echo $ObjAutoridad->getEmail(); ?>">
+             <input name = "email" type="text" id= "email" class="form-control" placeholder="E-mail" value="<?php echo $ObjAutoridad->getEmail(); ?>" required>
          </div>
      </div>
 <div class="form-group">

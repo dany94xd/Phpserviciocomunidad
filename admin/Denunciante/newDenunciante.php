@@ -58,13 +58,13 @@ if (isset($_SESSION['MiSession'])){
   <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Apellidos:</label>
          <div class="col-xs-10">
-             <input name = "apellido" type="text" id= "apellido" placeholder="apellidos" class="form-control"  />
+             <input name = "apellido" type="text" id= "apellido" placeholder="apellidos" class="form-control"  required/>
          </div>
      </div>
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Email:</label>
          <div class="col-xs-10">
-             <input name = "email" type="text" id= "email" class="form-control" placeholder="email" />
+             <input name = "email" type="text" id= "email" class="form-control" placeholder="email" required/>
          </div>
      </div>
 

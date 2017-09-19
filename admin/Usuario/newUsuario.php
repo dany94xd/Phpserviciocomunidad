@@ -57,7 +57,7 @@ if (isset($_SESSION['MiSession'])){
          <label for="inputName" class="control-label col-xs-2">Contraseña:</label>
          <div class="col-xs-10">
              <input name = "contrasenia" type="text" id= "contrasenia" class="form-control"
- placeholder="Contraseña"  />
+ placeholder="Contraseña"  required/>
          </div>
      </div>
      

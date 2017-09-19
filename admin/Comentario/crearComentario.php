@@ -53,7 +53,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevoComentario.php'
 
 
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'descripccion' type='text' id= 'descripccion' class='form-control' placeholder='Descripcion'>";
+             echo "<input name = 'descripccion' type='text' id= 'descripccion' class='form-control' placeholder='Descripcion' required >";
          echo "</div>";
          echo "</div>";
 

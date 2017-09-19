@@ -64,7 +64,7 @@ echo "Edicion en proceso . . . . </br>";
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Tipo:</label>
          <div class="col-xs-10">
-             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" value="<?php echo $ObjTipoUsuario->getTipo(); ?>">
+             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" value="<?php echo $ObjTipoUsuario->getTipo(); ?>" required/>
          </div>
      </div>
      <div class="form-group">

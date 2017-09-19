@@ -51,7 +51,7 @@ if (isset($_SESSION['MiSession'])){
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Tipo:</label>
          <div class="col-xs-10">
-             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" />
+             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" required/>
          </div>
      </div>
      <div class="form-group">

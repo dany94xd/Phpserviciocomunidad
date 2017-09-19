@@ -50,7 +50,7 @@ echo "<nav class='navbar navbar-default'>";
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Titulo:</label>
          <div class="col-xs-10">
-             <input name = "titulo" type="text" id= "Titulo" class="form-control" placeholder="Titulo"  />
+             <input name = "titulo" type="text" id= "Titulo" class="form-control" placeholder="Titulo"  required/>
          </div>
      </div>
 
@@ -58,7 +58,7 @@ echo "<nav class='navbar navbar-default'>";
          <label for="inputName" class="control-label col-xs-2">Descripcion:</label>
          <div class="col-xs-10">
 <textarea name="descripcion" id= "descripcion"
-   rows="5" cols="50">Escriba la descripcion de la denuncia</textarea>
+   rows="5" cols="50" placeholder="Escriba la descripcion de la denuncia..." required></textarea>
    </div>
      </div>
 

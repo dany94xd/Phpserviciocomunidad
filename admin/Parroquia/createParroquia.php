@@ -44,7 +44,7 @@ $CiudadCollectorObj = new CiudadCollector();
      echo "<div class='form-group'>";     
          echo "<label for='inputName' class='control-label col-xs-2'>Parroquia:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name='nombre' type='text' id= 'nombre' class='form-control' placeholder='Parroquia'>";
+             echo "<input name='nombre' type='text' id= 'nombre' class='form-control' placeholder='Parroquia' required>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
