@@ -210,22 +210,18 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
      </div>
  <!-- ****************************************Foto************************************************** -->
 <div class="form-group">
+<label for='inputName' class='control-label col-xs-2'>Imagen:</label>
 <div class='col-xs-10'>
 
-
- <label for="imagen">Imagen</label>
-<?php 
-$img = $ObjDenuncia->getImagen();
- echo "<img src='../perfil/$img' width='50' height='50' />";
-	?>
-	 
+<!-- <?php 
+// $img = $_GET['imagen'];
+ echo "<img src='../perfil/$img' width='50' height='50' />"?> -->
   <input id="imagen" name="imagen" size="30" type="file">
 
 
 </div>
                 
-            </div>
-
+</div>
 
 
      <div class="form-group">
