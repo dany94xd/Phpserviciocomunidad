@@ -214,10 +214,9 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
  <label for="imagen">Imagen</label>
-
- <!-- <?php 
-// $img = $_GET['imagen'];
- echo "<img src='../perfil/$img' width='50' height='50' />"?> -->
+<?php 
+$img = $ObjDenuncia->getImagen();
+ echo "<img src='../perfil/$img' width='50' height='50' />"
   <input id="imagen" name="imagen" size="30" type="file">
 
 
